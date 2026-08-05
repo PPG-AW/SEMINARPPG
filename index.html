@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refleksi Pengalaman Belajar - Calon Guru PPG</title>
+<style>
+  :root{
+    --primary:#1e3a5f;
+    --secondary:#2c5daa;
+    --accent:#3a86ff;
+    --light:#f8fafc;
+    --gray:#64748b;
+    --dark:#0f172a;
+    --border:#e2e8f0;
+    --card-shadow:0 4px 24px rgba(30,58,95,0.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Segoe UI', 'Inter', -apple-system, sans-serif;
+    line-height:1.8;
+    color:#334155;
+    background:var(--light);
+  }
+  .container{max-width:1020px;margin:0 auto;padding:0 24px}
+  header{
+    background:linear-gradient(135deg,var(--primary) 0%, var(--secondary) 100%);
+    color:white;
+    padding:64px 0 88px;
+    position:relative;
+  }
+  header::after{
+    content:'';
+    position:absolute;
+    bottom:-32px;left:0;right:0;
+    height:64px;
+    background:var(--light);
+    transform:skewY(-1.5deg);
+  }
+  .header-content{position:relative;z-index:2}
+  .badge{
+    display:inline-block;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.25);
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+    letter-spacing:0.6px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  h1{font-size:34px;line-height:1.25;font-weight:700;margin-bottom:14px;max-width:800px}
+  .subtitle{font-size:17px;opacity:0.92;max-width:700px;font-weight:400;line-height:1.6}
+  .meta{margin-top:22px;font-size:13px;opacity:0.85;display:flex;gap:18px;flex-wrap:wrap}
+  nav.sticky-nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(248,250,252,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    padding:14px 0;
+  }
+  .nav-links{display:flex;gap:6px;overflow-x:auto}
+  .nav-links a{
+    text-decoration:none;
+    color:var(--gray);
+    font-size:13.5px;
+    font-weight:600;
+    padding:8px 14px;
+    border-radius:8px;
+    transition:all 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.active{background:var(--primary);color:white}
+  main{padding:36px 0 60px}
+  .intro{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:30px 32px;
+    box-shadow:var(--card-shadow);
+    margin-bottom:36px;
+  }
+  .intro h2{color:var(--primary);font-size:18px;margin-bottom:10px}
+  .intro p{font-size:15px;color:#475569}
+  .section-title{
+    font-size:22px;color:var(--primary);
+    margin:44px 0 20px;
+    font-weight:700;
+    display:flex;align-items:center;gap:12px;
+  }
+  .section-title span.num{
+    width:32px;height:32px;
+    background:var(--primary);
+    color:white;
+    border-radius:8px;
+    display:inline-flex;align-items:center;justify-content:center;
+    font-size:14px;
+  }
+  .card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:28px 30px;
+    box-shadow:var(--card-shadow);
+    margin-bottom:22px;
+  }
+  .card p{font-size:15px;color:#475569;margin-bottom:14px;text-align:justify}
+  .card p:last-child{margin-bottom:0}
+  .card ul{padding-left:20px;margin:12px 0}
+  .card li{font-size:14.5px;color:#475569;margin-bottom:8px}
+  .card strong{color:#1e293b}
+  .quote{
+    background:#f0f7ff;
+    border-left:4px solid var(--secondary);
+    padding:14px 18px;
+    border-radius:0 12px 12px 0;
+    margin:18px 0;
+    font-size:14.5px;
+    color:#1e3a5f;
+    font-style:italic;
+  }
+  .artefak-section{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:var(--card-shadow);
+  }
+  .artefak-head{
+    padding:22px 28px;
+    background:#f8fafc;
+    border-bottom:1px solid var(--border);
+  }
+  .artefak-head h3{color:var(--primary);font-size:18px;margin-bottom:6px}
+  .artefak-head p{font-size:14px;color:var(--gray)}
+  .viewer-box{
+    background:#0f172a;
+    padding:12px;
+  }
+  .viewer-frame{
+    width:100%;
+    height:760px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    display:block;
+  }
+  .artefak-body{padding:26px 28px}
+  .artefak-body h4{color:var(--primary);font-size:15px;margin:22px 0 10px}
+  .artefak-body h4:first-child{margin-top:0}
+  .artefak-body p{font-size:14.5px;color:#475569;margin-bottom:12px;text-align:justify}
+  @media(max-width:720px){
+    h1{font-size:26px}
+    .card, .intro, .artefak-body{padding:22px}
+    .viewer-frame{height:560px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+    <div class="badge">Refleksi PPG - Pembelajaran Mendalam</div>
+    <h1>Refleksi Pengalaman Belajar dalam Konteks sebagai Calon Guru</h1>
+    <p class="subtitle">Model 4C: Connection, Challenge, Concept, Change - Disusun sebagai bahan presentasi mata kuliah Pembelajaran Mendalam</p>
+    <div class="meta">
+      <span>Calon Guru PPG</span>
+      <span>SMK Negeri 1 Salatiga</span>
+      <span>Tahun 2025/2026</span>
+    </div>
+  </div>
+</header>
+
+<nav class="sticky-nav">
+  <div class="container">
+    <div class="nav-links">
+      <a href="#connection" class="active">Connection</a>
+      <a href="#challenge">Challenge</a>
+      <a href="#concept">Concept</a>
+      <a href="#change">Change</a>
+      <a href="#artefak">Analisis Artefak</a>
+      <a href="#viewer">Viewer RPP</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+
+  <div class="intro">
+    <h2>Pengantar Refleksi</h2>
+    <p>Refleksi ini saya susun untuk menggambarkan proses belajar saya selama mengikuti perkuliahan Pembelajaran Mendalam. Saya mencoba menuliskan dengan bahasa yang jujur dan apa adanya, sesuai dengan pengalaman saya sebagai mahasiswa PPG yang sedang belajar menjadi guru. Melalui refleksi ini saya semakin belajar membuat rancangan pembelajaran yang ideal, yang tidak hanya mengejar ketuntasan materi, tetapi juga benar-benar memperhatikan kebutuhan dan keberagaman murid.</p>
+  </div>
+
+  <div class="section-title" id="connection"><span class="num">1</span> Connection - Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru?</div>
+  <div class="card">
+    <p>Keterkaitan materi perkuliahan dengan peran saya sebagai calon guru sangat erat, karena membantu saya memahami bahwa merencanakan pembelajaran adalah bagian dari kewajiban utama seorang guru. Dari materi ini saya mempelajari banyak hal yang sebelumnya belum saya pahami secara utuh.</p>
+    <p>Sebelumnya, saya memandang peran guru lebih banyak sebagai penyampai materi. Melalui materi Pembelajaran Mendalam, saya mulai memahami bahwa peran guru lebih luas, yaitu sebagai fasilitator yang membantu murid untuk berpikir dan memahami secara mendalam, bukan hanya aktif secara fisik saja.</p>
+    <p>Saya belajar tentang pentingnya merencanakan pembelajaran dengan alur yang jelas. Konsep Understanding by Design (UbD) memberikan gambaran bahwa perencanaan sebaiknya dimulai dari menetapkan tujuan, kemudian menentukan bagaimana asesmennya, baru setelah itu merancang kegiatan pembelajarannya. Pola pikir ini sangat membantu saya untuk tidak lagi membuat rancangan pembelajaran yang hanya berfokus pada kegiatan semata.</p>
+    <p>Selain itu, saya juga belajar tentang tiga prinsip pembelajaran mendalam yaitu berkesadaran, bermakna, dan menggembirakan. Tiga prinsip ini memberikan arah bagi saya bahwa pembelajaran yang baik adalah pembelajaran yang membuat murid sadar akan tujuan belajarnya, merasakan keterkaitan materi dengan kehidupan nyata, dan merasa aman serta senang untuk mencoba dan belajar dari kesalahan.</p>
+    <p>Dengan memahami materi ini, saya merasa peran saya sebagai calon guru menjadi lebih jelas. Di sini saya semakin belajar membuat rancangan pembelajaran yang ideal, yang tidak hanya mengejar capaian kurikulum, tetapi juga mengembangkan karakter dan kompetensi murid secara utuh.</p>
+  </div>
+
+  <div class="section-title" id="challenge"><span class="num">2</span> Challenge - Apa yang berbeda dari praktik yang selama ini saya lakukan?</div>
+  <div class="card">
+    <p>Jika saya jujur, praktik pembelajaran yang selama ini saya lakukan belum menerapkan diferensiasi sama sekali. Saya cenderung memberikan perlakuan yang sama untuk semua murid, baik dari segi materi, cara penyampaian, maupun bentuk tugasnya.</p>
+    <p>Saya belum pernah benar-benar memikirkan bahwa diferensiasi itu penting. Ketika ada murid yang belum memahami materi, saya lebih sering menganggap bahwa murid tersebut yang kurang belajar, bukan karena rancangan pembelajaran saya yang belum mengakomodasi perbedaan. Pembelajaran yang saya lakukan juga lebih banyak menekankan pada hafalan dan latihan soal yang seragam.</p>
+    <p>Tantangan lain yang saya rasakan adalah adanya keraguan apakah diferensiasi itu bisa dijalankan, terutama terkait dengan keterbatasan waktu dan jumlah murid yang cukup banyak. Saya sempat berpikir bahwa diferensiasi itu akan sangat merepotkan dan membutuhkan persiapan yang sangat banyak, sehingga sulit untuk diterapkan.</p>
+    <p>Setelah mempelajari materi perkuliahan, pemahaman saya mulai berubah. Ternyata diferensiasi tidak harus dilakukan secara lengkap dalam satu waktu. Kita bisa menyesuaikan dengan kondisi kelas. Misalnya, pada satu pertemuan kita bisa fokus pada diferensiasi konten saja, atau proses saja, atau produk saja. Kita tidak harus melakukan ketiganya sekaligus. Pemahaman ini membuat saya merasa lebih realistis dan tidak lagi memandang diferensiasi sebagai sesuatu yang terlalu berat untuk dilakukan.</p>
+    
+  </div>
+
+  <div class="section-title" id="concept"><span class="num">3</span> Concept - Apa konsep utama dan penting yang saya pelajari?</div>
+  <div class="card">
+    <p>Dari materi perkuliahan, ada beberapa konsep utama yang menurut saya penting sebagai bekal calon guru.</p>
+    <p><strong>Pertama, tentang perbedaan pembelajaran mendalam dan pembelajaran dangkal.</strong> Saya belajar bahwa pembelajaran mendalam bukan berarti memberikan materi yang lebih sulit atau tugas yang lebih banyak. Pembelajaran mendalam lebih menekankan pada pemahaman konsep, kemampuan menghubungkan materi dengan konteks kehidupan nyata, dan adanya ruang untuk refleksi. Sementara pembelajaran dangkal lebih berfokus pada hafalan dan hasil akhir saja.</p>
+    <p><strong>Kedua, tiga prinsip pembelajaran mendalam.</strong> Prinsip berkesadaran mengingatkan saya untuk peka terhadap kebutuhan murid dan menghadirkan pembelajaran dengan tujuan yang jelas. Prinsip bermakna mengingatkan saya untuk mengaitkan materi dengan kehidupan nyata murid sehingga lebih relevan. Prinsip menggembirakan mengingatkan saya untuk menciptakan suasana belajar yang positif, aman, dan membuat murid berani mencoba.</p>
+    <p><strong>Ketiga, pengalaman belajar memahami, mengaplikasikan, dan merefleksikan.</strong> Saya belajar bahwa pembelajaran yang baik tidak berhenti pada tahap memahami saja, tetapi perlu dilanjutkan dengan mengaplikasikan dalam konteks yang nyata dan merefleksikan proses belajar yang telah dilalui.</p>
+    <p><strong>Keempat, kerangka perencanaan dan asesmen.</strong> Melalui materi Understanding by Design, saya belajar pentingnya merancang pembelajaran secara mundur, dari tujuan ke asesmen baru ke kegiatan. Saya juga belajar tentang tiga jenis asesmen yaitu assessment for learning, as learning, dan of learning. Sebelumnya saya lebih banyak berfokus pada asesmen akhir saja, sekarang saya mulai memahami pentingnya asesmen di awal untuk memetakan kebutuhan murid dan asesmen sebagai proses belajar.</p>
+    <p><strong>Kelima, pembelajaran berdiferensiasi.</strong> Ini adalah konsep yang paling membuka wawasan saya. Diferensiasi konten berkaitan dengan apa yang dipelajari murid, diferensiasi proses berkaitan dengan bagaimana murid mempelajarinya, dan diferensiasi produk berkaitan dengan bagaimana murid menunjukkan pemahamannya. Dari konsep ini saya belajar bahwa keberagaman murid adalah kenyataan yang perlu diperhatikan, dan tugas kita sebagai guru adalah memberikan ruang bagi perbedaan tersebut.</p>
+    <p><strong>Keenam, pemanfaatan teknologi dan inkuiri kolaboratif.</strong> Saya belajar bahwa teknologi dapat dimanfaatkan untuk mendukung pembelajaran yang lebih fleksibel dan berpihak pada murid, serta pentingnya kolaborasi dan refleksi berkelanjutan dalam meningkatkan kualitas pembelajaran.</p>
+  </div>
+
+  <div class="section-title" id="change"><span class="num">4</span> Change - Apa perubahan yang ingin saya lakukan?</div>
+  <div class="card">
+    <p>Setelah mendapatkan materi perkuliahan ini, perubahan yang ingin saya lakukan adalah membuat pembelajaran yang lebih menyesuaikan dengan kebutuhan siswa. Secara khusus, saya ingin mencoba menerapkan diferensiasi yang sederhana dan realistis sesuai dengan kondisi kelas.</p>
+    <p>Perubahan pertama yang ingin saya lakukan ada pada perencanaan. Saya ingin membiasakan diri untuk memulai perencanaan dari asesmen diagnostik sederhana, agar saya dapat mengetahui kesiapan dan kebutuhan murid sebelum menentukan kegiatan belajar. Saya juga ingin lebih memperhatikan dimensi profil lulusan yang ingin dikembangkan, tidak hanya fokus pada ketercapaian materi saja. Di sini saya semakin belajar membuat rancangan pembelajaran yang ideal, yang tersusun secara runtut dan berorientasi pada murid.</p>
+    <p>Perubahan kedua ada pada pelaksanaan. Saya tidak ingin lagi memaksakan pembelajaran yang seragam untuk semua murid. Saya ingin mencoba diferensiasi yang fleksibel, misalnya hanya menerapkan diferensiasi konten atau proses saja dalam satu pertemuan, dengan memberikan pilihan sumber belajar atau cara belajar yang berbeda sesuai dengan kebutuhan murid. Saya ingin memberikan pendampingan yang lebih intensif bagi murid yang membutuhkan penguatan prasyarat, dan memberikan ruang pengayaan bagi murid yang sudah siap.</p>
+    <p>Perubahan ketiga berkaitan dengan pemanfaatan teknologi. Saya ingin memanfaatkan teknologi yang ada secara lebih bermakna, bukan hanya sebagai media presentasi, tetapi sebagai sarana untuk mendukung belajar mandiri, kolaborasi, dan asesmen yang lebih variatif. Misalnya dengan menggunakan website pembelajaran, video, atau platform diskusi sederhana.</p>
+    <p>Perubahan keempat berkaitan dengan budaya belajar. Saya ingin mengubah kebiasaan yang lebih banyak menekankan hafalan menjadi kebiasaan yang mendorong analisis dan refleksi. Saya ingin memberikan ruang bagi murid untuk menganalisis makna dari apa yang dihitung atau dipelajari, serta merefleksikan kesulitan dan strategi belajarnya.</p>
+    <p>Saya menyadari bahwa perubahan ini tidak bisa dilakukan secara instan. Saya ingin memulainya dari langkah-langkah kecil yang bisa saya lakukan secara konsisten, sambil terus belajar dan memperbaiki rancangan pembelajaran saya.</p>
+  </div>
+
+  <div class="section-title" id="artefak"><span class="num">5</span> Analisis Artefak Pembelajaran</div>
+  <div class="artefak-section">
+    <div class="artefak-head">
+      <h3>Artefak yang Saya Gunakan</h3>
+      <p>RPP UAS PMA - Simpangan Rata-Rata Data Tunggal - Mengukur Konsistensi Data Penjualan Retail - Kelas X Pemasaran - SMK Negeri 1 Salatiga - Model Flipped Classroom dipadu I Do, We Do, You Do</p>
+    </div>
+    
+    <div id="viewer" class="viewer-box">
+      <iframe class="viewer-frame" src="RPP UAS PMA.pdf" title="Viewer RPP UAS PMA"></iframe>
+    </div>
+
+    <div class="artefak-body">
+      <h4>1. Mana artefak pembelajaran yang dapat saya jadikan bukti?</h4>
+      <p>Artefak yang saya jadikan bukti dukung hasil refleksi ini adalah RPP yang saya buat sendiri untuk UAS, yaitu RPP Matematika tentang Simpangan Rata-Rata Data Tunggal dengan konteks Mengukur Konsistensi Data Penjualan Retail untuk Kelas X Pemasaran. RPP ini disusun dengan model Flipped Classroom yang dipadu dengan pendekatan I Do, We Do, You Do, serta mengusung prinsip joyful, meaningful, dan mindful.</p>
+
+      <h4>2. Mengapa artefak tersebut yang saya pilih?</h4>
+      <p>Alasan saya memilih artefak ini cukup sederhana. Karena RPP ini merupakan bukti bahwa saya mencoba menerapkan diferensiasi, yang sebelumnya belum pernah saya lakukan. Di dalam RPP ini saya mencoba menerapkan diferensiasi konten dan diferensiasi proses berdasarkan hasil asesmen diagnostik, dengan pembagian level sesuai kesiapan murid.</p>
+      <p>Selain itu, RPP ini juga menjadi bukti bahwa saya mencoba mengatasi masalah keterbatasan waktu dan perbedaan kesiapan prasyarat murid, serta mencoba memanfaatkan teknologi melalui website pembelajaran sebelum tatap muka. RPP ini juga mencoba mengaitkan materi statistika yang cenderung abstrak dengan konteks jurusan pemasaran, sehingga lebih bermakna bagi murid.</p>
+      <p>Saya menyadari bahwa RPP ini masih jauh dari sempurna dan masih perlu banyak perbaikan, namun saya memilihnya karena ini adalah karya saya sendiri yang paling dekat dengan materi pembelajaran berdiferensiasi yang sedang saya pelajari.</p>
+
+      <h4>3. Bagian mana dari artefak ini yang mendukung hasil refleksi saya?</h4>
+      <p><strong>Bagian identitas dan karakteristik murid.</strong> Pada bagian ini saya mencoba menuliskan karakteristik murid berdasarkan observasi, seperti gaya belajar yang beragam dan konteks jurusan pemasaran yang membutuhkan kemampuan analisis data. Bagian ini mendukung refleksi saya pada bagian Connection, karena saya belajar pentingnya memahami murid sebelum merencanakan pembelajaran.</p>
+      <p><strong>Bagian tujuan pembelajaran dan dimensi profil lulusan.</strong> Pada bagian ini saya mencoba merumuskan tujuan dengan tingkatan yang berbeda, dari memahami, menerapkan, menghitung, sampai menganalisis. Selain itu saya mencoba mengembangkan dimensi penalaran kritis dan kemandirian. Hal ini sejalan dengan konsep yang saya pelajari tentang perencanaan yang berorientasi pada tujuan dan pengembangan karakter.</p>
+      <p><strong>Bagian diferensiasi pembelajaran.</strong> Ini adalah bagian yang paling mendukung refleksi saya pada bagian Challenge, Concept, dan Change. Di bagian ini saya menuliskan penerapan diferensiasi konten dan proses berdasarkan level kesiapan murid. Ada level yang membutuhkan penguatan prasyarat, level yang siap materi utama, dan level pengayaan yang juga berperan sebagai peer tutor. Bagian ini menjadi bukti nyata bahwa saya ingin menggunakan diferensiasi yang menyesuaikan siswa, dan bahwa diferensiasi tidak harus dilakukan secara lengkap sekaligus, tetapi bisa disesuaikan dengan kondisi.</p>
+      <p><strong>Bagian materi dan strategi pembelajaran.</strong> Pada bagian materi saya mencoba membuat langkah mengingat yang sederhana yaitu langkah yang sistematis serta memberikan interpretasi makna dari nilai simpangan rata-rata, yaitu simpangan kecil berarti konsisten dan simpangan besar berarti tidak konsisten. Pada bagian strategi, saya menggunakan Flipped Classroom untuk memberikan kesempatan belajar mandiri sebelum tatap muka, serta pendekatan I Do, We Do, You Do untuk memberikan pendampingan yang bertahap. Bagian ini mendukung refleksi saya tentang pembelajaran yang bermakna, menggembirakan, dan pentingnya pemanfaatan teknologi.</p>
+      <p>Secara keseluruhan, artefak ini menjadi cerminan proses belajar saya dalam mencoba membuat rancangan pembelajaran yang ideal. Di sini saya semakin belajar bahwa merancang pembelajaran yang ideal itu membutuhkan pemahaman terhadap murid, perencanaan yang matang, serta kemauan untuk terus merefleksikan dan memperbaiki praktik yang ada.</p>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  const sections = document.querySelectorAll('.section-title');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', ()=>{
+    let current='';
+    sections.forEach(sec=>{
+      const top = sec.offsetTop - 140;
+      if(window.scrollY >= top) current = sec.getAttribute('id');
+    });
+    navLinks.forEach(a=>{
+      a.classList.remove('active');
+      const href = a.getAttribute('href');
+      if(href && href.includes(current)) a.classList.add('active');
+    });
+  });
+</script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f"}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a26418109868fd64',t:'MTc4NTkxNTAwMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
