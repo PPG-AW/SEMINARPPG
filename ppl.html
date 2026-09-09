@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dossier Karier Guru · PPL Terbimbing</title>
+<style>
+  :root {
+    --navy: #0e1c33; --navy2: #173154; --gold: #c9a227; --gold2: #e8d48b;
+    --paper: #f6f3ea; --ink: #1a2332; --muted: #5b6573; --line: #d9d1bc;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Cambria, "Hoefler Text", Georgia, serif; background: #d8d2c4; color: var(--ink); line-height: 1.7; }
+  .sheet { max-width: 1040px; margin: 0 auto; background: var(--paper); }
+  .masthead {
+    background: linear-gradient(160deg, var(--navy), var(--navy2)); color: #f4efe2;
+    padding: 36px 32px 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: end;
+  }
+  .role { letter-spacing: .28em; font-size: 11px; color: var(--gold); text-transform: uppercase; }
+  h1 { font-size: clamp(28px, 4.5vw, 40px); line-height: 1.1; margin: 8px 0; }
+  .tagline { color: #c9d2e0; max-width: 38em; }
+  .idcard { border: 1px solid var(--gold); padding: 14px 16px; min-width: 230px; font-size: 13px; color: #dfe6f2; }
+  .idcard b { display: block; color: var(--gold2); font-size: 15px; margin-bottom: 6px; }
+  nav.job { display: flex; flex-wrap: wrap; background: var(--navy); border-top: 3px solid var(--gold); }
+  nav.job a { color: #d5deec; text-decoration: none; padding: 11px 16px; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; border-right: 1px solid #2a4060; }
+  nav.job a:hover { background: #1b3358; color: var(--gold2); }
+  .wrap { padding: 28px 32px 48px; }
+  h2 { font-size: 22px; color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 6px; margin: 22px 0 14px; }
+  h3 { font-size: 17px; color: var(--navy2); margin: 12px 0 6px; }
+  p { margin-bottom: 11px; }
+  .qmark { background: #fff; border-left: 5px solid var(--gold); padding: 12px 16px; margin: 16px 0 14px; border: 1px solid var(--line); border-left-width: 5px; }
+  .qcode { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+  .qtext { font-style: italic; color: var(--muted); margin: 4px 0 0; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 8px 0 22px; }
+  .stat { background: #fff; border-top: 3px solid var(--gold); padding: 14px 12px; }
+  .stat b { display: block; font-size: 26px; color: var(--navy); line-height: 1; }
+  .stat span { font-size: 12px; color: var(--muted); }
+  .timeline { border-left: 3px solid var(--gold); margin: 8px 0 22px 8px; padding-left: 22px; }
+  .step { position: relative; margin-bottom: 16px; }
+  .step::before { content: ""; width: 12px; height: 12px; background: var(--gold); border: 3px solid var(--navy); border-radius: 50%; position: absolute; left: -31px; top: 6px; }
+  .when { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .box { background: #fff; padding: 16px; border: 1px solid var(--line); }
+  ul.job { margin: 0 0 12px 1.2em; }
+  ul.job li { margin-bottom: 8px; }
+  .cv { width: 100%; border-collapse: collapse; margin: 8px 0 18px; background: #fff; }
+  .cv th { background: var(--navy); color: var(--gold2); text-align: left; padding: 10px 12px; font-size: 13px; letter-spacing: .06em; }
+  .cv td { padding: 12px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 14px; }
+  .cv tr:hover td { background: #fbf6e8; }
+  .num { color: var(--gold); font-weight: 700; width: 36px; }
+  .next { background: var(--navy); color: #e8eef8; padding: 20px; margin-top: 12px; }
+  .next h2 { color: var(--gold2); border-color: var(--gold); }
+  .next .qcode { color: var(--gold2); }
+  .next .qtext { color: #c9d2e0; }
+  .next li { margin: 0 0 8px 18px; }
+  footer.sign { padding: 22px 32px 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--muted); }
+  footer.sign b { color: var(--navy); display: block; font-size: 16px; }
+  @media (max-width: 800px) {
+    .masthead, .cols, .stats, footer.sign { grid-template-columns: 1fr; display: grid; }
+    nav.job a { border-right: 0; border-bottom: 1px solid #2a4060; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header class="masthead">
+    <div>
+      <p class="role">Teaching portfolio · calon guru matematika</p>
+      <h1>Praktik Pengalaman<br>Lapangan Terbimbing</h1>
+      <p class="tagline">Dossier karier calon guru matematika: dari orientasi sekolah mitra hingga tiga siklus praktik yang diuji umpan balik — siap dibawa ke PPL Mandiri.</p>
+    </div>
+    <aside class="idcard">
+      <b>Identitas profesional</b>
+      Awang Haris Prasetyo Adhi<br>
+      NIM 95202581O<br>
+      PPG Prajabatan 2026 · Matematika<br>
+      Penempatan: SMK N 1 Salatiga<br>
+      Kelas: X-PM1 Pemasaran
+    </aside>
+  </header>
+  <nav class="job">
+    <a href="#a1">Connection</a>
+    <a href="#a2">Challenge</a>
+    <a href="#a3">Concept</a>
+    <a href="#a4">Change</a>
+    <a href="#b1">Artefak</a>
+    <a href="#b2">Alasan</a>
+    <a href="#b3">Cuplikan</a>
+    <a href="#c">Simpulan</a>
+  </nav>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>1.453</b><span>siswa di sekolah mitra</span></div>
+      <div class="stat"><b>14</b><span>rombel per jenjang</span></div>
+      <div class="stat"><b>3</b><span>siklus praktik terbimbing</span></div>
+      <div class="stat"><b>X-PM1</b><span>Pemasaran · Unit Produksi</span></div>
+    </div>
+    <p>Guru pamong: Alexandra Tri Wiloso, S.Pd. Dosen pembimbing lapangan: Fika Widya Pratama, S.Si., M.Pd. Refleksi pengalaman di sekolah mitra: connection, challenge, concept, change.</p>
+
+    <h2>Kompetensi yang terbentuk</h2>
+
+    <article id="a1">
+      <div class="qmark">
+        <span class="qcode">Connection</span>
+        <p class="qtext">Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru?</p>
+      </div>
+      <p>Mata kuliah ini terkait dengan peran calon guru yang tidak hanya menguasai materi, tetapi hidup di dalam ekosistem sekolah. PPL Terbimbing menempatkan saya di SMK Negeri 1 Salatiga dari orientasi, observasi, asistensi, hingga tiga siklus praktik mengajar. Keputusan kelas tidak berdiri sendiri: ia terikat pada manajemen kurikulum, kesiswaan, sarana, anggaran, dan kultur sekolah. Guru yang baik memahami murid; guru yang utuh juga memahami sekolah tempat murid itu belajar.</p>
+      <p>Keterkaitan itu terasa sejak orientasi. Informasi dari pengelola PPG, kepala sekolah, dan guru pamong menata etika, jadwal, dan cara meminta bimbingan. Observasi manajemen memperlihatkan 1.453 siswa, empat belas rombongan belajar per jenjang, Unit Produksi, dan program kewirausahaan sebagai konteks nyata matematika SMK. Observasi kelas X-PM1 menajamkan peran: membaca budaya vokasional, latar ekonomi yang beragam, gaya sosial-kinestetik, serta kelemahan inisiatif dan perencanaan, sebelum merancang satu langkah pun.</p>
+      <p>Peran bergeser dari penyusun RPP di atas kertas menjadi pembelajar profesional yang merencanakan, melaksanakan, menerima umpan balik guru pamong, lalu memperbaiki siklus berikutnya. Model refleksi Lefebvre — identifikasi, analisis, tindak lanjut — menjadi cara kerja, bukan laporan akhir. Tanpa peran itu, teori diferensiasi dan pembelajaran mendalam tetap tinggal di modul.</p>
+    </article>
+
+    <article id="a2">
+      <div class="qmark">
+        <span class="qcode">Challenge</span>
+        <p class="qtext">Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini?</p>
+      </div>
+      <p>Praktik saya selama ini mudah puas jika RPP sudah lengkap dan siswa tampak sibuk. PPL Terbimbing menantang ukuran itu. Di lapangan, rancangan yang rapi bisa goyah karena waktu terpotong ibadah, tautan pra-kelas sulit diakses, atau siswa mampu menghitung tetapi tidak mampu menafsirkan. Umpan balik guru pamong memaksa melihat celah yang tidak disadari saat mengajar.</p>
+      <ul class="job">
+        <li><strong>Dari merancang aktivitas ke merancang siklus.</strong> Setiap siklus harus memuat identifikasi kebutuhan, perencanaan, pelaksanaan, evaluasi, dan tindak lanjut bagi siklus berikutnya.</li>
+        <li><strong>Dari “kelas sudah ramai” ke sintaks yang terbaca.</strong> Pada siklus 1, diskusi dan LKPD berjalan, tetapi alur belum tegas. Guru pamong menuntut langkah yang dapat diikuti siswa. Pola I Do, We Do, You Do ditambahkan agar kegiatan berurutan, bukan hanya sibuk.</li>
+        <li><strong>Dari mengecek administrasi ke mendampingi belajar.</strong> Saya sempat lama di meja depan memeriksa buku catatan. Guru pamong menegur: pendampingan di kelompok lebih penting. Buku catatan dikumpulkan di akhir, bukan di awal.</li>
+        <li><strong>Dari rumus yang benar ke makna yang dipahami.</strong> Pada siklus 2, banyak siswa sudah menghitung mean, median, dan modus, tetapi belum mampu menjelaskan artinya bagi penjualan toko.</li>
+        <li><strong>Dari rencana kaku ke adaptasi waktu.</strong> Siklus 3 terpotong kegiatan ibadah. Pelajaran: siapkan skenario fleksibel — mana yang wajib di kelas, mana yang bisa dialihkan ke penguatan mandiri.</li>
+      </ul>
+      <p>Tantangan terbesar adalah merendahkan diri di hadapan bukti. Refleksi dalam tindakan menuntut mengubah keputusan di tengah pelajaran, lalu menuliskannya jujur sebagai bahan perbaikan, bukan pembelaan diri.</p>
+    </article>
+
+    <article id="a3">
+      <div class="qmark">
+        <span class="qcode">Concept</span>
+        <p class="qtext">Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru?</p>
+      </div>
+      <div class="timeline">
+        <div class="step"><p class="when">Konsep 1</p><h3>Sekolah sebagai sistem manajemen</h3><p>Kurikulum, kesiswaan, SDM, sarana, anggaran, sistem informasi, dan ketatalaksanaan bekerja bersama. Keputusan guru matematika tidak lepas dari kultur Unit Produksi, jadwal, dan kebijakan penilaian.</p></div>
+        <div class="step"><p class="when">Konsep 2</p><h3>Observasi sebagai pemetaan kebutuhan</h3><p>Murid dibaca dari segi kognitif, sosial-emosional, moral, fisik, gaya belajar, dan konteks sosial-budaya. Di X-PM1: budaya vokasional, gaya sosial-kinestetik, gawai merata, kelemahan inisiatif dan perencanaan menjadi dasar diferensiasi dan scaffolding.</p></div>
+        <div class="step"><p class="when">Konsep 3</p><h3>Asistensi sebagai jembatan</h3><p>Profiling, perangkat bersama guru pamong, refleksi rancangan. Pada trigonometri sudut istimewa, Jigsaw hidup ketika ada contoh awal, petunjuk singkat, dan kelompok yang mencampur siswa aktif dengan yang pemalu.</p></div>
+        <div class="step"><p class="when">Konsep 4</p><h3>Siklus praktik dan lima tahap</h3><p>Identifikasi, perencanaan, pelaksanaan, evaluasi, refleksi. Keterlibatan, eksplorasi, penjelasan, elaborasi, evaluasi. Pola I Do, We Do, You Do memberi urutan yang terbaca, lalu dikurangi seiring kemandirian tumbuh.</p></div>
+        <div class="step"><p class="when">Konsep 5</p><h3>Model Lefebvre dan umpan balik</h3><p>Identifikasi temuan, analisis akar masalah, rancangan tindak lanjut. Umpan balik guru pamong — sintaks, pendampingan, tujuan yang dibacakan, cek pemahaman di tengah, tafsir hasil — mengubah praktik dari siklus ke siklus.</p></div>
+      </div>
+    </article>
+
+    <article id="a4">
+      <div class="qmark">
+        <span class="qcode">Change</span>
+        <p class="qtext">Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini?</p>
+      </div>
+      <p>Perubahan terikat pada praktik matematika di SMK Negeri 1 Salatiga, khususnya kelas vokasional seperti X-PM1, dan akan dibawa ke PPL Mandiri.</p>
+      <ul class="job">
+        <li><strong>Memulai setiap unit dari bukti murid, bukan daftar rumus.</strong> Asesmen awal, observasi, dan informasi guru pamong menentukan tujuan, media, dan tingkat scaffolding.</li>
+        <li><strong>Menuliskan sintaks yang dapat diikuti siswa.</strong> Tujuan dibacakan di awal. Langkah I Do, We Do, You Do ditampakkan. Pertanyaan cek pemahaman disisipkan di tengah, bukan hanya di akhir.</li>
+        <li><strong>Mendampingi belajar, bukan mengurus meja guru.</strong> Waktu di kelompok diutamakan. Administrasi seperti pengumpulan catatan diletakkan di akhir.</li>
+        <li><strong>Menuntut tafsir, bukan hanya hitung.</strong> Setiap ukuran statistika ditautkan pada penjualan, gaji, atau Unit Produksi, lalu diminta dijelaskan maknanya.</li>
+        <li><strong>Menyiapkan skenario waktu yang fleksibel.</strong> Menentukan bagian inti yang wajib tersampaikan jika jam terpotong.</li>
+        <li><strong>Menutup setiap pertemuan dengan tindak lanjut tertulis.</strong> Temuan, akar masalah, dan satu perbaikan konkret — model Lefebvre.</li>
+      </ul>
+      <p>Ukuran baru: apakah murid tahu tujuan hari itu, mampu menafsirkan hasil hitung, dan apakah saya sendiri memperbaiki satu celah dari umpan balik yang baru saja diterima. Bukan suasana ramai atau rumus yang sudah disampaikan.</p>
+    </article>
+
+    <h2>Bukti kerja</h2>
+
+    <article id="b1">
+      <div class="qmark">
+        <span class="qcode">Bukti karya</span>
+        <p class="qtext">Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini?</p>
+      </div>
+      <p>Tiga artefak mewakili rentang PPL Terbimbing: memahami sekolah dan kelas, merancang bersama guru pamong, lalu menguji dan memperbaiki praktik dalam tiga siklus. Artefak pertama = cara memahami sekolah. Artefak kedua = cara membaca murid dan merancang bersama. Artefak ketiga = kemampuan menguji rancangan lalu memperbaikinya.</p>
+      <table class="cv">
+        <thead><tr><th></th><th>Dokumen</th><th>Kedudukan dalam 4C</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="num">01</td>
+            <td><b>Laporan orientasi dan observasi manajemen sekolah</b><br>SMK Negeri 1 Salatiga sebagai sistem, bukan hanya ruang kelas matematika.</td>
+            <td>Connection</td>
+          </tr>
+          <tr>
+            <td class="num">02</td>
+            <td><b>Observasi lingkungan belajar X-PM1 + refleksi asistensi Jigsaw</b><br>Trigonometri sudut istimewa; profil murid menjadi dasar perangkat.</td>
+            <td>Concept</td>
+          </tr>
+          <tr>
+            <td class="num">03</td>
+            <td><b>Tiga siklus refleksi praktik statistika</b><br>Tabel distribusi frekuensi, ukuran pemusatan, ukuran penyebaran.</td>
+            <td>Challenge dan Change</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article id="b2">
+      <div class="qmark">
+        <span class="qcode">Alasan pemilihan</span>
+        <p class="qtext">Mengapa artefak tersebut yang saya pilih?</p>
+      </div>
+      <p><strong>Artefak 1</strong> paling utuh menandai pintu masuk ke sekolah mitra. Laporan orientasi dan observasi manajemen memaksa keluar dari ruang kelas matematika: melihat kurikulum kewirausahaan, kesiswaan, sarana, anggaran, dan ketatalaksanaan. Tanpa artefak ini, Connection hanya klaim sudah “mengenal sekolah”.</p>
+      <p><strong>Artefak 2</strong> paling jelas menurunkan observasi menjadi keputusan desain. Observasi X-PM1 memetakan Unit Produksi, gaya sosial-kinestetik, dan kelemahan perencanaan. Refleksi asistensi Jigsaw menunjukkan apa yang terjadi ketika rancangan bertemu kelas: siswa bingung tanpa contoh awal, waktu tergesa, partisipasi timpang. Guru pamong menuntut struktur, petunjuk singkat, dan komposisi kelompok yang lebih adil.</p>
+      <p><strong>Artefak 3</strong> paling jujur menampilkan Change yang sudah diuji. Tiga siklus statistika tidak mengulang rancangan yang sama. Siklus 1 menyingkap sintaks kabur. Siklus 2 memperbaiki alur dengan I Do, We Do, You Do, tetapi masih lemah pada tafsir. Siklus 3 menuliskan tujuan, menyisipkan cek pemahaman, lalu diuji lagi oleh waktu yang terpotong. Jejak itu menopang Challenge dan Change sekaligus. Saya tidak menampilkan semua produk PPL — yang dibutuhkan adalah tiga karya paling utuh.</p>
+    </article>
+
+    <article id="b3">
+      <div class="qmark">
+        <span class="qcode">Cuplikan yang menopang</span>
+        <p class="qtext">Bagian mana dari artefak ini yang mendukung hasil refleksi saya?</p>
+      </div>
+      <p><strong>Pada Artefak 1,</strong> temuan bahwa seluruh bidang manajemen bermuara pada pendidikan yang efektif, serta catatan konkret: 1.453 siswa, empat belas kelas per jenjang, ekstrakurikuler wajib kepramukaan, kurikulum kewirausahaan dari kelas X hingga akselerasi bisnis di kelas XII, dan Unit Produksi sebagai wajah vokasional. Matematika SMK harus hidup di dalam sistem itu, bukan di luarnya.</p>
+      <p><strong>Pada Artefak 2,</strong> profil X-PM1 dan umpan balik asistensi. Siswa antusias pada omzet, target pasar, dan media digital; lemah pada inisiatif tugas mandiri; sebagian pemalu, sebagian dominan. Pada Jigsaw trigonometri, siswa mampu melengkapi tabel sudut istimewa, tetapi kebingungan muncul ketika diskusi ahli dimulai tanpa contoh. Guru pamong meminta contoh sederhana dulu, instruksi LK yang lebih singkat, dan kelompok campuran.</p>
+      <div class="cols">
+        <article class="box">
+          <p class="when">Siklus 1 · cuplikan artefak 3</p>
+          <h3>Tabel distribusi frekuensi</h3>
+          <p>Aturan Sturges, kelompok homogen, LKPD berdiferensiasi. Kelemahan: alur kabur, catatan dikumpulkan terlalu awal, soal latihan kurang. Tindak lanjut: gabungkan flipped dengan direct instruction.</p>
+        </article>
+        <article class="box">
+          <p class="when">Siklus 2 · cuplikan artefak 3</p>
+          <h3>Ukuran pemusatan · toko retail</h3>
+          <p>I Do, We Do, You Do. Tautan pra-kelas ke WhatsApp, dashboard siswa. Kelemahan: siswa menghitung mean–median–modus tetapi belum menafsirkan. Tindak lanjut: tujuan dibacakan, cek pemahaman di tengah.</p>
+        </article>
+      </div>
+      <article class="box">
+        <p class="when">Siklus 3 · cuplikan artefak 3</p>
+        <h3>Ukuran penyebaran · dua set gaji</h3>
+        <p>Apersepsi: rata-rata sama, sebaran berbeda. Perbaikan siklus 2 sudah tampak. Ujian baru: waktu terpotong ibadah. Cuplikan ini menopang Change: saya tidak mempertahankan rancangan hanya karena sudah “sesuai rencana”.</p>
+      </article>
+      <p>Benang merah: guru yang dituju tidak lagi bertanya “apakah materi sudah selesai?”, melainkan “apakah saya sudah membaca sekolah dan murid, menjalankan langkah yang terbaca, lalu memperbaiki satu celah sebelum mengajar lagi?”</p>
+    </article>
+
+    <section class="next" id="c">
+      <div class="qmark" style="background:transparent;border-color:#3a5278">
+        <span class="qcode">Simpulan</span>
+        <p class="qtext">Apa yang saya bawa dari perjalanan ini?</p>
+      </div>
+      <h2>Kontrak menuju PPL Mandiri</h2>
+      <p>Mata kuliah Praktik Pengalaman Lapangan Terbimbing menggeser saya dari mahasiswa yang merancang di atas kertas menjadi calon guru yang diuji oleh kelas nyata. Orientasi, observasi, asistensi, dan tiga siklus praktik menjadi satu alur: memahami sistem sekolah, membaca murid, merancang bersama guru pamong, melaksanakan, lalu memperbaiki. Tiga artefak menunjukkan pergeseran itu sudah bergerak dari pengenalan sekolah, ke rancangan berbasis bukti, lalu ke perbaikan berdasarkan umpan balik. Refleksi ini akan dibawa ke PPL Mandiri sebagai cara kerja, bukan sebagai laporan yang selesai setelah ditandatangani.</p>
+      <ul>
+        <li>Memulai setiap unit dari asesmen awal dan observasi, bukan dari daftar rumus.</li>
+        <li>Menuliskan sintaks yang dapat diikuti siswa; cek pemahaman di tengah pelajaran.</li>
+        <li>Mendampingi kelompok; administrasi diletakkan di akhir.</li>
+        <li>Menuntut tafsir statistika pada konteks penjualan, gaji, atau Unit Produksi.</li>
+        <li>Menutup pertemuan dengan temuan, akar masalah, dan satu perbaikan konkret.</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer class="sign">
+    <div>
+      <b>Awang Haris Prasetyo Adhi</b>
+      Calon Guru Matematika · NIM 95202581O
+    </div>
+    <div style="text-align:right">
+      Salatiga, 25 Agustus 2026<br>
+      PPG Prajabatan · FKIP Universitas Kristen Satya Wacana
+    </div>
+  </footer>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3842b59daefe416',t:'MTc4ODkzNTY4OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

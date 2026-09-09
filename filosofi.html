@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naskah Taman Ilmu · Filosofi Pendidikan dan Pendidikan Nilai</title>
+<style>
+  :root {
+    --ink: #2c1810; --ink-soft: #5a3d2b; --sepia: #f4e4c1; --paper: #f7edd4;
+    --rule: #b0895a; --wine: #7a2e2e; --gold: #8a6a32; --mark: #6b2a2a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif; color: var(--ink); background: #3b2a1a; line-height: 1.75; }
+  .stage {
+    max-width: 940px; margin: 28px auto 60px;
+    background: radial-gradient(ellipse at 20% 0%, rgba(255,255,255,.18), transparent 50%),
+      repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(176,137,90,.1) 28px),
+      linear-gradient(180deg, #fbf3dd 0%, #f3e2b8 100%);
+    border: 14px solid #5c3b22; outline: 2px solid #c4a574; outline-offset: -8px;
+    box-shadow: 0 18px 50px rgba(0,0,0,.45);
+  }
+  header.mast { text-align: center; padding: 48px 36px 22px; border-bottom: 3px double var(--rule); }
+  .kicker { letter-spacing: .32em; font-size: 11px; text-transform: uppercase; color: var(--gold); }
+  h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; margin: 10px 0 8px; color: var(--wine); }
+  .orn { color: var(--rule); margin: 6px 0 14px; letter-spacing: 8px; text-align: center; }
+  .lede { font-style: italic; max-width: 40em; margin: 0 auto; color: var(--ink-soft); font-size: 17px; }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; padding: 14px 24px; font-variant: small-caps; letter-spacing: .06em; }
+  nav a { color: var(--wine); text-decoration: none; border-bottom: 1px solid transparent; }
+  nav a:hover { border-bottom-color: var(--rule); }
+  main { padding: 8px 42px 48px; }
+  h2 { font-size: 24px; color: var(--wine); text-align: center; margin: 40px 0 6px; }
+  h3 { font-size: 18px; color: var(--gold); margin: 16px 0 8px; }
+  p { margin-bottom: 12px; text-align: justify; }
+  .drop::first-letter { float: left; font-size: 56px; line-height: .8; padding: 6px 10px 0 0; color: var(--wine); font-weight: 700; }
+  .qmark {
+    background: rgba(122,46,46,.07); border: 1px solid var(--rule); border-left: 6px solid var(--wine);
+    padding: 12px 16px; margin: 22px 0 16px;
+  }
+  .qmark .qcode { display: block; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--wine); margin-bottom: 4px; }
+  .qmark .qtext { font-style: italic; color: var(--ink-soft); margin: 0; text-align: left; }
+  blockquote.epigraph {
+    margin: 18px auto 24px; max-width: 36em; text-align: center; font-style: italic; color: var(--ink-soft);
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 14px 8px;
+  }
+  blockquote.epigraph cite { display: block; margin-top: 8px; font-size: 12px; font-style: normal; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+  .among { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 18px 0 22px; }
+  .among article { border: 1px solid var(--rule); background: rgba(255,255,255,.28); padding: 14px 12px; text-align: center; }
+  .among strong { display: block; color: var(--wine); font-size: 15px; margin-bottom: 4px; }
+  .among span { font-size: 13px; color: var(--ink-soft); }
+  ul.ink { margin: 8px 0 14px 1.3em; }
+  ul.ink li { margin-bottom: 8px; }
+  .folio { display: grid; grid-template-columns: 64px 1fr; gap: 12px; margin: 18px 0; padding-bottom: 16px; border-bottom: 1px dashed var(--rule); }
+  .folio .no { width: 56px; height: 56px; border: 2px solid var(--wine); display: grid; place-items: center; font-size: 22px; color: var(--wine); }
+  .aksi { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+  .aksi article { background: rgba(122,46,46,.06); border: 1px solid var(--rule); padding: 14px; }
+  .aksi p { text-align: left; font-size: 14.5px; }
+  footer.colophon { text-align: center; padding: 28px 24px 36px; border-top: 3px double var(--rule); font-size: 14px; color: var(--ink-soft); }
+  footer.colophon strong { color: var(--wine); display: block; font-size: 17px; margin-top: 6px; }
+  @media (max-width: 720px) { main { padding: 8px 18px 36px; } .among, .aksi { grid-template-columns: 1fr; } .stage { margin: 0; border-width: 8px; } }
+</style>
+</head>
+<body>
+<div class="stage">
+  <header class="mast">
+    <p class="kicker">Naskah refleksi · PPG Prajabatan 2026</p>
+    <p class="orn">✦ ✦ ✦</p>
+    <h1>Filosofi Pendidikan<br>&amp; Pendidikan Nilai</h1>
+    <p class="orn">———</p>
+    <p class="lede">Naskah refleksi pengalaman belajar: untuk apa mendidik, menjadi guru yang seperti apa, dan bagaimana filosofi diturunkan menjadi aksi di kelas matematika SMK.</p>
+  </header>
+  <nav>
+    <a href="#a1">Connection</a>
+    <a href="#a2">Challenge</a>
+    <a href="#a3">Concept</a>
+    <a href="#a4">Change</a>
+    <a href="#b1">Artefak</a>
+    <a href="#b2">Alasan</a>
+    <a href="#b3">Cuplikan</a>
+    <a href="#c">Simpulan</a>
+  </nav>
+  <main>
+    <p class="drop">Sebelum merancang strategi atau memilih media, seorang calon guru perlu kejelasan filosofis. Ki Hadjar Dewantara menempatkan pendidikan sebagai tuntunan atas hidup tumbuhnya anak, bukan pemaksaan kehendak pendidik. Pancasila menempatkan pendidikan sebagai proses menanamkan nilai, bukan semata transfer pengetahuan. Naskah ini menelusuri keterkaitan, tantangan, konsep, perubahan, dan bukti karya.</p>
+
+    <h2>Empat cermin refleksi</h2>
+    <p class="orn">❧</p>
+
+    <article id="a1">
+      <div class="qmark">
+        <span class="qcode">Connection</span>
+        <p class="qtext">Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru?</p>
+      </div>
+      <p>Mata kuliah ini terkait dengan pertanyaan paling dalam pada peran saya sebagai calon guru: untuk apa saya mendidik, dan menjadi guru yang seperti apa. Kedua landasan Ki Hadjar dan Pancasila langsung mengatur cara saya berdiri di kelas matematika SMK: menuntun kodrat siswa, bukan mengejar ketuntasan materi dengan mengorbankan martabat mereka.</p>
+      <p>Keterkaitan itu menjadi konkret pada kasus Ali yang mogok sekolah. Ali bukan “anak nakal”; ia kehilangan kebahagiaan belajar karena sekolah belum menuntun kodratnya yang aktif dan menyukai futsal, serta belum menjadi taman yang menyenangkan setelah pindah lingkungan. Membaca kasus itu, saya melihat bayangan siswa SMK yang menjauh dari matematika karena kelas terasa asing dari dunia mereka. Peran guru di situ bukan menambah PR, melainkan menata ulang sistem kelas agar anak merasa diterima.</p>
+      <p>Kisah Sokola Rimba memperkuat hal yang sama dari sudut lain: pendidikan yang baik menguatkan jati diri, bukan mencabut siswa dari budayanya. Sebagai calon guru, saya juga terikat pada pendidikan nilai dan kode etik. Siswa belajar bukan hanya dari rumus yang saya jelaskan, tetapi dari sikap, batas profesional, dan cara saya memperlakukan mereka. Materi ini menyambungkan peran saya sebagai penuntun, teladan nilai, dan penjaga martabat profesi — tiga peran yang tidak bisa digantikan kecanggihan metode semata.</p>
+      <blockquote class="epigraph">
+        “Pendidikan ialah tuntunan di dalam hidup tumbuhnya anak-anak.”
+        <cite>Ki Hadjar Dewantara</cite>
+      </blockquote>
+    </article>
+
+    <article id="a2">
+      <div class="qmark">
+        <span class="qcode">Challenge</span>
+        <p class="qtext">Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini?</p>
+      </div>
+      <p>Praktik saya selama ini lebih dekat pada pengajaran daripada pendidikan. Saya merasa berhasil jika materi tersampaikan, soal terselesaikan, dan nilai terkumpul. Ki Hadjar justru membedakan keduanya: pengajaran menekankan kecakapan, pendidikan menuntun budi pekerti sebagai kesatuan pikiran, perasaan, dan kemauan. Pergeseran itu menantang kebiasaan mengukur mutu kelas hanya dari ketuntasan kompetensi.</p>
+      <ul class="ink">
+        <li><strong>Dari memaksakan standar seragam ke menuntun kodrat anak.</strong> Saya terbiasa meminta semua siswa menempuh jalan yang sama. Pemikiran KHD menuntut saya mengakui bahwa hidup tumbuhnya anak terletak di luar kehendak pendidik. Guru menuntun, bukan mencetak.</li>
+        <li><strong>Dari sekolah sebagai tempat menyelesaikan kurikulum ke sekolah sebagai taman.</strong> Kasus Ali memperlihatkan bahwa kehilangan kebahagiaan belajar adalah masalah filosofis, bukan hanya masalah disiplin. Sekolah yang tidak menyenangkan sedang gagal menuntun.</li>
+        <li><strong>Dari cara pandang tunggal ke banyak sudut.</strong> Circle of Viewpoints atas Sokola Rimba memaksa saya berdiri pada posisi Butet, tetua adat, anak Rimba, dan pihak luar. Pendidikan yang “baik” menurut sekolah formal bisa terasa sebagai ancaman martabat.</li>
+        <li><strong>Dari menempel nilai ke menanamkannya dalam mapel.</strong> Pendidikan nilai bukan tugas mapel lain. Guru matematika pun teladan, fasilitator, dan penjaga iklim kelas yang aman.</li>
+      </ul>
+      <p>Kalimat kunci yang menantang praktik saya: masyarakat adat bukan tidak mau belajar — mereka hanya tidak mau kehilangan martabatnya. Di kelas matematika SMK, siswa yang menolak bukan otomatis menolak belajar.</p>
+    </article>
+
+    <article id="a3">
+      <div class="qmark">
+        <span class="qcode">Concept</span>
+        <p class="qtext">Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru?</p>
+      </div>
+      <p>Konsep-konsep berikut menjadi kerangka yang paling saya bawa dari mata kuliah ini.</p>
+      <h3>Pertama, Sistem Among dan tiga semboyan</h3>
+      <p>Guru adalah pamong: menjaga, membimbing, dan memberi ruang. Budi pekerti adalah kesatuan cipta-rasa-karsa, bukan daftar nasihat yang ditempel di dinding kelas.</p>
+      <div class="among">
+        <article><strong>Ing Ngarsa Sung Tuladha</strong><span>Di depan, guru menjadi teladan sikap, batas profesional, dan cara memperlakukan siswa.</span></article>
+        <article><strong>Ing Madya Mangun Karsa</strong><span>Di tengah, guru membangun kehendak belajar — bukan menggantikan usaha anak.</span></article>
+        <article><strong>Tut Wuri Handayani</strong><span>Di belakang, guru mendorong. Kodrat anak dituntun, bukan dicetak seragam.</span></article>
+      </div>
+      <h3>Kedua, kodrat alam dan kodrat zaman</h3>
+      <p>Kodrat alam merujuk pada sifat dan potensi unik setiap anak. Kodrat zaman merujuk pada konteks waktu, budaya, dan perubahan. Mendidik sesuai zaman tidak berarti mengikuti semua tren, melainkan menyiapkan anak hidup di dunianya, bukan di zaman guru. Pembelajaran kontekstual lahir dari pertemuan kedua kodrat itu.</p>
+      <h3>Ketiga, Pancasila sebagai jiwa pendidikan nasional</h3>
+      <p>Tujuan pendidikan nasional menuntut manusia yang beriman, berakhlak, cakap, dan bertanggung jawab. Nilai ketuhanan, kemanusiaan, persatuan, kerakyatan, dan keadilan sosial menjadi kriteria apakah suatu praktik kelas memuliakan murid atau justru menyingkirkan yang berbeda. Pendidikan adalah transfer nilai, bukan hanya transfer pengetahuan.</p>
+      <h3>Keempat, pola pikir bertumbuh sebagai filosofi hidup pendidik</h3>
+      <p>Dari Sokola Rimba dan kerangka growth mindset, hambatan terbesar sering kali bukan minimnya sumber daya, melainkan keyakinan yang mengunci pertumbuhan. Pendidikan yang memberdayakan bersifat fleksibel, menghargai budaya siswa, dan percaya bahwa kemampuan dapat berkembang. Tut Wuri Handayani adalah wujud operasional dari keyakinan itu.</p>
+      <h3>Kelima, pendidikan nilai dan kode etik sebagai satu kesatuan</h3>
+      <p>Nilai diinternalisasi melalui keteladanan, pembiasaan, dan pendekatan kognitif; lalu dikembangkan agar siswa mampu menimbang secara mandiri. Kode etik guru — tanggung jawab pada profesi, peserta didik, sejawat, orang tua, dan masyarakat — menjaga agar kepedulian tidak berubah menjadi pelanggaran batas. Niat baik tanpa kesadaran profesional tetap dapat merugikan murid.</p>
+    </article>
+
+    <article id="a4">
+      <div class="qmark">
+        <span class="qcode">Change</span>
+        <p class="qtext">Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini?</p>
+      </div>
+      <p>Perubahan yang ingin saya lakukan bersifat konkret dan terikat pada tiga lingkaran: diri sendiri, murid, dan sekolah, sesuai rumusan aksi nyata yang telah disusun.</p>
+      <ul class="ink">
+        <li><strong>Menjadikan refleksi sebagai kebiasaan, bukan tugas akhir semester.</strong> Jurnal singkat harian: apa yang sudah menuntun, apa yang masih memaksa, dan apa yang akan diperbaiki besok. Pola pikir bertumbuh dimulai dari guru.</li>
+        <li><strong>Mengubah cara memandang siswa yang “menolak” matematika.</strong> Sebelum menyimpulkan malas atau lemah, saya akan menanyakan apakah kelas sudah menuntun kodratnya, apakah konteksnya dekat dengan dunia siswa, dan apakah lingkungan masih terasa aman.</li>
+        <li><strong>Mengintegrasikan nilai ke dalam pembelajaran matematika, bukan menempelkannya.</strong> Gotong royong, kejujuran, tanggung jawab, dan ketekunan tampak pada cara berkelompok, cara mengakui kesalahan hitung, dan cara menghargai usaha teman. Umpan balik menonjolkan proses, bukan hanya jawaban akhir.</li>
+        <li><strong>Menjaga batas profesional sambil tetap penuh kasih.</strong> Dekat dan mudah dihubungi, tetapi interaksi tetap pada ruang dan prosedur yang jelas. Empati tidak boleh menggeser peran orang tua atau menciptakan ketergantungan.</li>
+        <li><strong>Berkolaborasi membangun budaya sekolah, tidak bekerja sendirian.</strong> Berbagi praktik baik, mendukung penguatan karakter, menjaga nama baik profesi lewat sikap sehari-hari.</li>
+      </ul>
+      <p>Secara sikap, saya ingin berhenti merasa sudah “mendidik” hanya karena sudah mengajar. Guru yang saya tuju adalah penuntun yang berpihak pada kodrat anak, teladan nilai yang konsisten, dan profesional yang sadar batas.</p>
+    </article>
+
+    <h2>Tiga naskah bukti</h2>
+    <p class="orn">❧</p>
+
+    <article id="b1">
+      <div class="qmark">
+        <span class="qcode">Bukti karya</span>
+        <p class="qtext">Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini?</p>
+      </div>
+      <p>Saya memilih tiga artefak yang mewakili rentang belajar pada mata kuliah ini: menerapkan filosofi pada kasus konkret, menguji cara pandang melalui banyak sudut, lalu merumuskan komitmen aksi. Ketiganya saling mengisi. Artefak pertama menampilkan kemampuan menerapkan filosofi pada masalah anak. Artefak kedua menampilkan keluasan cara pandang. Artefak ketiga menampilkan komitmen perubahan yang terukur.</p>
+      <div class="folio">
+        <div class="no">I</div>
+        <div>
+          <h3>Analisis dan pemecahan kasus Ali mogok sekolah</h3>
+          <p>Berdasarkan pokok pikiran Ki Hadjar Dewantara dan nilai-nilai Pancasila. Menopang Connection dan Concept: filosofi dipakai untuk membaca akar masalah dan merancang sistem sekolah yang menuntun.</p>
+        </div>
+      </div>
+      <div class="folio">
+        <div class="no">II</div>
+        <div>
+          <h3>Circle of Viewpoints atas kisah Sokola Rimba</h3>
+          <p>Beserta rumusan peran guru dalam pendidikan nilai. Menopang Challenge dan Concept: pendidikan harus kontekstual, menghargai jati diri siswa, dan menjadi tanggung jawab setiap guru.</p>
+        </div>
+      </div>
+      <div class="folio">
+        <div class="no">III</div>
+        <div>
+          <h3>Rumusan aksi nyata untuk diri, murid, dan sekolah</h3>
+          <p>Komitmen akhir mata kuliah. Menopang Change: filosofi, nilai, dan kode etik diturunkan menjadi langkah yang dapat dijalankan.</p>
+        </div>
+      </div>
+    </article>
+
+    <article id="b2">
+      <div class="qmark">
+        <span class="qcode">Alasan pemilihan</span>
+        <p class="qtext">Mengapa artefak tersebut yang saya pilih?</p>
+      </div>
+      <p><strong>Artefak 1</strong> dipilih karena paling jelas menurunkan filosofi ke keputusan praktis. Kasus Ali memaksa saya tidak berhenti pada kutipan KHD. Saya harus menunjuk akar masalah — kodrat yang tidak tertuntun, sekolah yang kehilangan sifat taman, culture shock, lemahnya tri pusat pendidikan — lalu merancang langkah bagi kepala sekolah, guru, orang tua, dan teman sekelas. Tanpa artefak ini, Connection hanya berupa pengakuan bahwa filosofi itu penting.</p>
+      <p><strong>Artefak 2</strong> dipilih karena paling kuat menantang cara pandang tunggal. Circle of Viewpoints memaksa saya berdiri pada posisi Butet, tetua adat, anak Rimba, dan pihak luar. Rumusan peran guru dalam pendidikan nilai kemudian mengunci Challenge: menanamkan nilai adalah tanggung jawab saya sebagai guru matematika, bukan tugas mapel lain.</p>
+      <p><strong>Artefak 3</strong> dipilih karena paling utuh menampilkan Change. Rumusan aksi nyata membagi komitmen ke diri, murid, dan sekolah, lengkap dengan langkah, tantangan, dan antisipasi. Di situlah filosofi tidak tinggal sebagai wawasan, melainkan menjadi janji kerja: refleksi harian, menuntun sesuai kodrat, menanamkan Pancasila lewat pembiasaan, dan menjaga kode etik.</p>
+      <p>Saya tidak menampilkan semua produk perkuliahan. Yang dibutuhkan sebagai bukti adalah tiga karya yang paling utuh menautkan filosofi, nilai, dan aksi.</p>
+    </article>
+
+    <article id="b3">
+      <div class="qmark">
+        <span class="qcode">Cuplikan yang menopang</span>
+        <p class="qtext">Bagian mana dari artefak ini yang mendukung hasil refleksi saya?</p>
+      </div>
+      <p><strong>Pada Artefak 1,</strong> bagian yang paling menopang adalah analisis penyebab dari sudut kepala sekolah, guru, orang tua, dan teman, serta landasan filosofis yang menyertainya. Sekolah dinilai belum menuntun kodrat Ali yang aktif dan menyukai futsal; belum menjadi taman yang menyenangkan; dan belum menggerakkan tri pusat pendidikan. Langkah pemecahan — program adaptasi siswa pindahan, peer buddy, sekolah ramah anak, komunikasi empatik orang tua, dan budaya kelas inklusif — menopang Concept tentang sistem Among serta nilai kemanusiaan dan keadilan sosial. Cuplikan ini menjadi bukti Connection: filosofi dipakai untuk menolong anak yang menjauh dari sekolah, bukan untuk menghias makalah.</p>
+      <p><strong>Pada Artefak 2,</strong> bagian pendukung utama adalah empat sudut pandang Sokola Rimba dan rumusan Connect–Extend–Challenge pada pendidikan nilai. Dari sudut Butet, calistung adalah alat perlindungan; dari sudut tetua adat, pendidikan formal berisiko merusak tatanan; dari sudut anak Rimba, mereka ingin belajar tanpa kehilangan martabat. Kalimat kunci itu menopang Challenge di kelas matematika SMK. Bagian Extend merumuskan peran guru sebagai teladan, fasilitator, dan pembentuk iklim kelas yang aman — bukti bahwa pendidikan nilai melekat pada setiap mapel.</p>
+      <p><strong>Pada Artefak 3,</strong> bagian yang paling kuat adalah pemilahan aksi untuk diriku, muridku, dan sekolahku.</p>
+      <div class="aksi">
+        <article><h3>Untuk diriku</h3><p>Jurnal refleksi, belajar berkelanjutan, komitmen kode etik guru.</p></article>
+        <article><h3>Untuk muridku</h3><p>Asesmen diagnostik, diferensiasi, pembiasaan Pancasila, apresiasi atas usaha.</p></article>
+        <article><h3>Untuk sekolahku</h3><p>Berbagi praktik baik, penguatan karakter, menjaga profesionalisme.</p></article>
+      </div>
+      <p>Tabel tantangan–antisipasi menunjukkan bahwa Change sudah dipikirkan secara realistis, bukan sebagai slogan semangat semata. Benang merah ketiga artefak sejalan dengan jawaban 4C: guru yang saya tuju tidak lagi bertanya “materi apa yang harus selesai hari ini?”, melainkan “apakah saya sedang menuntun kodrat anak ini, atau sedang memaksakan kehendak saya?”</p>
+    </article>
+
+    <article id="c">
+      <div class="qmark">
+        <span class="qcode">SimpulanII</span>
+        <p class="qtext">Apa yang saya bawa dari perjalanan ini?</p>
+      </div>
+      <p>Mata kuliah Filosofi Pendidikan dan Pendidikan Nilai mengembalikan saya pada alasan menjadi guru. Pendidikan adalah tuntunan atas kodrat anak menuju keselamatan dan kebahagiaan, berlandaskan Pancasila, dijalankan dengan pola pikir bertumbuh, diteguhkan oleh pendidikan nilai, dan dijaga oleh kode etik. Tiga artefak yang dipilih menunjukkan bahwa pergeseran itu tidak hanya terjadi di tingkat gagasan, tetapi sudah tertuang dalam analisis kasus, cara pandang, dan komitmen aksi. Refleksi ini akan saya bawa ke praktik mengajar berikutnya, lalu diuji ulang di kelas.</p>
+    </article>
+  </main>
+  <footer class="colophon">
+    <p class="kicker">Colophon</p>
+    <strong>Awang Haris Prasetyo Adhi</strong>
+    NIM 95202581O · PPG Prajabatan 2026 · FKIP Universitas Kristen Satya Wacana<br>
+    Bidang Studi Matematika · SMK Negeri 1 Salatiga · 25 Agustus 2026
+  </footer>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a38429e6afe4a458',t:'MTc4ODkzNTYyOQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

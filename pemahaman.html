@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruang Kelas X CA 1 · Pemahaman Peserta Didik</title>
+<style>
+  :root {
+    --chalk: #f4f1de; --board: #1f4d3a; --board-dark: #16382a; --wood: #8b5a2b;
+    --apple: #c0392b; --star: #f4d35e; --sky: #4ea0d8; --paper: #fffdf6; --ink: #243025;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Trebuchet MS", "Century Gothic", Verdana, sans-serif;
+    background: #e8d7b5;
+    color: var(--ink); line-height: 1.65;
+  }
+  .school { max-width: 1080px; margin: 0 auto; background: var(--paper); box-shadow: 0 0 0 12px var(--wood), 0 0 40px rgba(0,0,0,.25); }
+  .board {
+    background: radial-gradient(circle at 20% 30%, rgba(255,255,255,.06), transparent 40%), linear-gradient(180deg, var(--board), var(--board-dark));
+    color: var(--chalk); padding: 36px 28px 22px; text-align: center;
+  }
+  .board::after { content: ""; display: block; height: 14px; background: linear-gradient(#c9a36a, #8b5a2b); margin: 18px -28px -22px; }
+  .abc { letter-spacing: .4em; font-weight: 700; color: var(--star); font-size: 13px; }
+  h1 { font-size: clamp(26px, 4.5vw, 40px); margin: 10px 0 8px; text-shadow: 2px 3px 0 rgba(0,0,0,.25); }
+  .chalk-line { font-style: italic; max-width: 40em; margin: 0 auto 14px; opacity: .92; }
+  nav.tray { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 8px; }
+  nav.tray a { background: rgba(255,255,255,.12); color: var(--chalk); text-decoration: none; padding: 6px 12px; border: 1px dashed rgba(244,241,222,.4); border-radius: 4px; font-size: 12px; }
+  nav.tray a:hover { background: rgba(244,211,94,.25); }
+  .room { padding: 28px 24px 48px; }
+  h2 { font-size: 22px; color: var(--board); border-bottom: 4px solid var(--star); display: inline-block; margin: 18px 0 12px; }
+  h3 { font-size: 17px; color: var(--board); margin: 12px 0 6px; }
+  p { margin-bottom: 12px; }
+  .qmark { background: #fff8e7; border-left: 8px solid var(--apple); padding: 12px 16px; margin: 18px 0 14px; }
+  .qmark .qcode { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--apple); font-weight: 700; }
+  .qmark .qtext { font-style: italic; margin: 4px 0 0; }
+  .desk-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0 22px; }
+  .desk { background: #fff; border: 3px solid var(--wood); border-radius: 8px 8px 2px 2px; padding: 12px 10px 14px; text-align: center; box-shadow: 0 6px 0 #6e451f; }
+  .desk .tag { display: inline-block; background: var(--sky); color: #fff; font-size: 11px; padding: 2px 8px; border-radius: 99px; margin-bottom: 6px; }
+  .desk h3 { font-size: 16px; }
+  .desk p { font-size: 13px; margin: 6px 0 0; }
+  .four { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0 20px; }
+  .card { background: #fff; border: 2px solid #d8c39a; padding: 16px; border-radius: 8px; }
+  ul.notes { margin: 0 0 12px 1.2em; }
+  ul.notes li { margin-bottom: 8px; }
+  .cork { background: repeating-linear-gradient(45deg, #d4a574, #d4a574 12px, #c9965c 12px, #c9965c 24px); padding: 18px; border: 10px solid #7a4e24; margin: 12px 0 22px; display: grid; gap: 12px; }
+  .pin { background: #fffef6; padding: 14px 16px; box-shadow: 3px 4px 0 rgba(0,0,0,.18); position: relative; }
+  .pin::before { content: ""; width: 14px; height: 14px; background: var(--apple); border-radius: 50%; position: absolute; top: -7px; left: 50%; box-shadow: 0 2px 0 rgba(0,0,0,.2); }
+  .pin h3 { color: var(--apple); font-size: 16px; }
+  .pin p { font-size: 14px; margin-top: 6px; }
+  .change { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .change li { list-style: none; background: #eaf6ea; border-left: 5px solid var(--board); padding: 10px 12px; font-size: 14px; }
+  footer.yard { background: var(--board-dark); color: var(--chalk); text-align: center; padding: 22px 16px 28px; }
+  footer.yard strong { display: block; font-size: 18px; margin-bottom: 4px; }
+  @media (max-width: 800px) { .desk-row, .four, .change { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="school">
+  <header class="board">
+    <p class="abc">A B C D E F · RUANG  X  CA  1 · SMK N 1 SALATIGA</p>
+    <h1>Pemahaman tentang<br>Peserta Didik &amp; Pembelajaran</h1>
+    <p class="chalk-line">Papan tulis hari ini: siapa murid yang kita hadapi, bagaimana membantu mereka belajar, dan bukti apa yang menopang keputusan itu.</p>
+    <nav class="tray">
+      <a href="#a1">Connection</a>
+      <a href="#a2">Challenge</a>
+      <a href="#a3">Concept</a>
+      <a href="#a4">Change</a>
+      <a href="#b1">Artefak</a>
+      <a href="#b2">Alasan</a>
+      <a href="#b3">Cuplikan</a>
+      <a href="#c">Simpulan</a>
+    </nav>
+  </header>
+
+  <div class="room">
+    <p>Mata kuliah ini menuntut guru membaca perkembangan kognitif, sosial-emosional, moral, dan fisik sebelum merancang model, media, atau asesmen. Konteks praktik: kelas X CA 1 jurusan Kecantikan, SMK Negeri 1 Salatiga — banyak siswa menganggap matematika tidak relevan, sebagian pasif karena takut salah, sebagian cepat bosan jika hanya mendengar ceramah.</p>
+
+    <h2>Catatan 4C di buku guru</h2>
+
+    <article id="a1">
+      <div class="qmark">
+        <span class="qcode">Connection</span>
+        <p class="qtext">Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru?</p>
+      </div>
+      <p>Materi terkait langsung dengan pertanyaan paling dasar: siapakah murid yang saya hadapi, dan bagaimana cara terbaik membantu mereka belajar. Tanpa pemahaman perkembangan, rancangan yang tampak rapi di atas kertas mudah gagal di kelas karena tidak menyentuh kebutuhan nyata.</p>
+      <p>Keterkaitan itu terasa pada dua lapis. Lapis pertama adalah studi kasus perkuliahan: kelas Pak Toni dengan Nina, Adi, Mario, dan Laksmi. Keempatnya berbeda bukan hanya pada nilai, tetapi pada cara berpikir, kebutuhan pengakuan, gaya sosial, dan kesiapan motorik. Lapis kedua adalah kelas nyata X CA 1. Di situ matematika sering terasa jauh dari dunia tata rias. Peran saya bergeser dari penyampai rumus menjadi pembaca murid: memetakan kesiapan, merancang jalan masuk yang berbeda, dan menjaga rasa aman untuk salah.</p>
+    </article>
+
+    <article id="a2">
+      <div class="qmark">
+        <span class="qcode">Challenge</span>
+        <p class="qtext">Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini?</p>
+      </div>
+      <p>Praktik lama saya mudah jatuh pada pola “guru menjelaskan, siswa meniru”, satu jenis tugas tertulis, dan mengukur keberhasilan dari ketertiban serta ketuntasan soal. Mata kuliah ini menantang kebiasaan itu.</p>
+      <ul class="notes">
+        <li><strong>Dari satu cetakan ke keragaman yang wajib dijawab.</strong> Ceramah klasikal tidak menyentuh Nina yang butuh objek konkret, Mario yang butuh gerak, Laksmi yang mudah inferior, dan Adi yang kuat sosial tetapi perlu diarahkan.</li>
+        <li><strong>Dari menyalahkan siswa pasif ke menelaah akar di sisi guru.</strong> Diagram tulang ikan menempatkan ceramah satu arah, hafalan, minim kolaborasi, dan rasa tidak aman sebagai akar — bukan kemalasan semata.</li>
+        <li><strong>Dari tugas seragam ke diferensiasi yang menuju tujuan yang sama.</strong> Tomlinson menuntut konten, proses, produk, dan lingkungan disesuaikan, tanpa menurunkan esensi konsep.</li>
+        <li><strong>Dari “tidak mampu” ke “belum mendapat jalan masuk”.</strong> Diskalkulia dan kesenjangan numerasi relevan di SMK: siswa membutuhkan scaffolding, bukan vonis bakat.</li>
+      </ul>
+    </article>
+
+    <article id="a3">
+      <div class="qmark">
+        <span class="qcode">Concept</span>
+        <p class="qtext">Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru?</p>
+      </div>
+      <p>Empat meja studi kasus menajamkan teori perkembangan menjadi keputusan kelas:</p>
+      <div class="desk-row">
+        <article class="desk"><span class="tag">Nina</span><h3>Konkret</h3><p>Operasional konkret (Piaget). Butuh objek, indikator jelas, langkah yang dapat dilihat.</p></article>
+        <article class="desk"><span class="tag">Adi</span><h3>Sosial</h3><p>Kuat secara sosial (Vygotsky). Perlu peran terarah agar tidak hanya menjaga hubungan.</p></article>
+        <article class="desk"><span class="tag">Mario</span><h3>Kinestetik</h3><p>Durasi pendek, gerak, giliran tegas. Diam terlalu lama membuatnya lepas.</p></article>
+        <article class="desk"><span class="tag">Laksmi</span><h3>Rentan inferior</h3><p>Krisis industry vs inferiority (Erikson). Umpan balik harus menonjolkan usaha.</p></article>
+      </div>
+      <div class="four">
+        <article class="card">
+          <h3>Perkembangan &amp; ZPD</h3>
+          <p>Piaget memetakan cara berpikir. Vygotsky menempatkan bantuan di Zona Perkembangan Proksimal, lalu dikurangi. Erikson mengingatkan harga diri. Kohlberg menuntun penalaran moral di kelompok.</p>
+        </article>
+        <article class="card">
+          <h3>Diferensiasi Tomlinson</h3>
+          <p>Konten (lisan, visual, praktik), proses (diskusi, simulasi, pilihan jalur), produk (poster, presentasi, unjuk kerja), lingkungan (zona diskusi, praktik, tenang). Profiling X CA 1: auditori dan kinestetik lebih tinggi; 56% multimodal.</p>
+        </article>
+        <article class="card">
+          <h3>Teori belajar</h3>
+          <p>Konstruktivisme: siswa membangun makna. Humanisme Rogers: lingkungan aman. Belajar sosial: model, peran, tutor sebaya. Maslow: motivasi tumbuh dari makna, bukan ancaman nilai.</p>
+        </article>
+        <article class="card">
+          <h3>Hambatan belajar</h3>
+          <p>Siswa yang tidak duduk tenang, sulit memulai, atau lemah pada simbol matematika dibaca dari perkembangan dan kebutuhan — termasuk kemungkinan diskalkulia — sebelum divonis malas.</p>
+        </article>
+      </div>
+    </article>
+
+    <article id="a4">
+      <div class="qmark">
+        <span class="qcode">Change</span>
+        <p class="qtext">Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini?</p>
+      </div>
+      <p>Perubahan terikat pada praktik matematika SMK, khususnya kelas heterogen seperti X CA 1 jurusan Kecantikan.</p>
+      <ul class="change">
+        <li>Memulai setiap topik dengan pemetaan murid (diagnostik, observasi, angket), bukan langsung rumus. Hasilnya jadi dasar kelompok fleksibel, bukan label tetap.</li>
+        <li>Merancang diferensiasi menuju tujuan yang sama: jalur perlu bimbingan, menengah, dan mahir; produk boleh berbeda tetapi esensi setara.</li>
+        <li>Mengaitkan matematika pada takaran bahan, proporsi rias, dan data sederhana di bengkel kecantikan.</li>
+        <li>Mengganti “guru menjelaskan, siswa meniru” dengan scaffolding: advance organizer, pertanyaan pemandu, Think-Pair-Share, kelompok berperan.</li>
+        <li>Menjaga aman secara psikologis: kesalahan sebagai data belajar; tidak mempermalukan siswa di depan kelas.</li>
+        <li>Membaca perilaku hati-hati sebelum menyimpulkan soal motivasi semata.</li>
+      </ul>
+      <p>Ukuran baru: apakah setiap murid — yang konkret maupun abstrak, pendiam maupun impulsif — mendapat jalan yang masuk akal untuk belajar. Bukan apakah materi sudah disampaikan lengkap.</p>
+    </article>
+
+    <h2>Mading artefak</h2>
+
+    <article id="b1">
+      <div class="qmark">
+        <span class="qcode">Bukti karya</span>
+        <p class="qtext">Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini?</p>
+      </div>
+      <p>Tiga artefak mewakili rentang: menganalisis keragaman lewat teori, memetakan murid nyata, lalu merancang perbaikan berdasarkan teori belajar.</p>
+      <div class="cork">
+        <article class="pin">
+          <h3>1 · Nina, Adi, Mario, Laksmi + modul Siklus Air</h3>
+          <p>Teori perkembangan diubah menjadi keputusan pedagogis. Menopang Connection dan Concept.</p>
+        </article>
+        <article class="pin">
+          <h3>2 · Profiling 25 peserta didik X CA 1 + rekomendasi diferensiasi</h3>
+          <p>Pemetaan gaya belajar, minat, dan kebutuhan nyata. Menopang Concept dan Change.</p>
+        </article>
+        <article class="pin">
+          <h3>3 · Tulang ikan kelas matematika yang pasif</h3>
+          <p>Koneksi masalah–teori–strategi: konstruktivisme, humanisme, belajar sosial. Menopang Challenge dan Change.</p>
+        </article>
+      </div>
+    </article>
+
+    <article id="b2">
+      <div class="qmark">
+        <span class="qcode">Alasan pemilihan</span>
+        <p class="qtext">Mengapa artefak tersebut yang saya pilih?</p>
+      </div>
+      <p><strong>Artefak 1</strong> paling jelas menandai pergeseran dari teori ke keputusan kelas. Setiap profil menuntut kebutuhan berbeda: Nina butuh kejelasan struktur, Adi butuh peran sosial terarah, Mario butuh gerak dan giliran, Laksmi butuh pengakuan proses. Modul Siklus Air membuktikan pemahaman itu dapat diwujudkan dalam aktivitas — mengamati gambar, menempel ilustrasi, menulis cerita perjalanan air — agar keempat profil masuk ke tujuan yang sama.</p>
+      <p><strong>Artefak 2</strong> paling dekat dengan peran di sekolah mitra. Profiling 25 peserta didik membuat keragaman tidak lagi kasus bunyi di modul, melainkan data kelas. Temuan multimodal dengan kecenderungan auditori-kinestetik, minat pada seni, kreativitas, dan kegiatan sosial, menjelaskan mengapa ceramah plus latihan tertulis sering gagal. Change yang ditulis bukan slogan, melainkan tindak lanjut pemetaan.</p>
+      <p><strong>Artefak 3</strong> paling jujur menelanjangi praktik lama. Kepala ikan: siswa kurang terlibat, tidak mandiri, lemah berpikir analitis. Tulang guru: ceramah satu arah. Tanpa artefak ini, Challenge hanya pengakuan umum.</p>
+    </article>
+
+    <article id="b3">
+      <div class="qmark">
+        <span class="qcode">Cuplikan yang menopang</span>
+        <p class="qtext">Bagian mana dari artefak ini yang mendukung hasil refleksi saya?</p>
+      </div>
+      <p><strong>Pada Artefak 1,</strong> tabel analisis kebutuhan dan peran teori pada modul Siklus Air. Nina dibaca sebagai operasional konkret; Adi lewat kekuatan sosial Vygotsky; Mario sebagai kinestetik; Laksmi mudah inferior jika umpan balik hanya menojolkan kesalahan.</p>
+      <p><strong>Pada Artefak 2,</strong> hasil pemetaan gaya belajar dan tabel rekomendasi diferensiasi. Rata-rata auditori dan kinestetik lebih tinggi daripada baca-tulis; 56 persen multimodal. Rekomendasi turun ke empat sisi Tomlinson.</p>
+      <p><strong>Pada Artefak 3,</strong> kepala ikan dan tabel koneksi masalah-teori-strategi. Ketergantungan pada arahan guru dihubungkan dengan otonomi kognitif Piaget; menyalin pekerjaan teman dengan ZPD dan scaffolding; takut berpendapat dengan lingkungan aman Rogers; rendahnya motivasi matematika dengan kebutuhan makna Maslow serta kaitan materi pada konteks kecantikan. Diferensiasi bukan pilihan tambahan, melainkan kebutuhan mendesak.</p>
+      <p>Benang merah: guru yang saya tuju tidak lagi bertanya “materi apa yang harus selesai hari ini?”, melainkan “murid yang mana yang belum mendapat jalan masuk, dan dukungan apa yang tepat untuknya?”</p>
+    </article>
+
+    <article id="c">
+      <div class="qmark">
+        <span class="qcode">SimpulanI</span>
+        <p class="qtext">Apa yang saya bawa dari perjalanan ini?</p>
+      </div>
+      <p>Mata kuliah Pemahaman tentang Peserta Didik dan Pembelajaran menempatkan murid di pusat keputusan profesional. Teori perkembangan, karakteristik peserta didik, teori belajar, diferensiasi, dan profiling bukan daftar istilah untuk dihafal, melainkan alat merancang pembelajaran yang adil di kelas heterogen. Tiga artefak menunjukkan pergeseran itu sudah mulai terwujud: dari menganalisis profil secara teoretis, memetakan kelas nyata, hingga merancang perbaikan berdasarkan data dan teori. Refleksi ini akan dibawa ke praktik berikutnya.</p>
+    </article>
+  </div>
+
+  <footer class="yard">
+    <strong>Awang Haris Prasetyo Adhi</strong>
+    NIM 95202581O · PPG Prajabatan 2026 · FKIP UKSW · Matematika<br>
+    SMK Negeri 1 Salatiga · Kelas X CA 1 Jurusan Kecantikan · 25 Agustus 2026
+  </footer>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3842b0abe5de416',t:'MTc4ODkzNTY3Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

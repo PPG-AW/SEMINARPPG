@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Bauran · Pembelajaran Daring &amp; Bauran</title>
+<style>
+  :root {
+    --bg: #070b14; --panel: #10182a; --line: #1e2d4a; --cyan: #22d3ee;
+    --orange: #fb923c; --text: #e6eef8; --muted: #93a4bf; --ok: #4ade80;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Segoe UI", "Lucida Sans Unicode", Tahoma, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+  .app { max-width: 1120px; margin: 0 auto; padding: 18px 16px 48px; }
+  .topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  .brand { font-weight: 700; } .brand span { color: var(--cyan); }
+  .pills { display: flex; gap: 6px; flex-wrap: wrap; }
+  .pills a { color: var(--muted); text-decoration: none; font-size: 12px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 99px; }
+  .pills a:hover { color: var(--cyan); border-color: var(--cyan); }
+  .status { font-size: 12px; color: var(--ok); }
+  .status i { display: inline-block; width: 8px; height: 8px; background: var(--ok); border-radius: 50%; margin-right: 6px; }
+  .window { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-bottom: 16px; }
+  .chrome { display: flex; align-items: center; gap: 6px; padding: 8px 12px; background: #0c1322; border-bottom: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+  .dot { width: 9px; height: 9px; border-radius: 50%; }
+  .r { background: #f87171; } .y { background: #fbbf24; } .g { background: #34d399; }
+  .pad { padding: 22px; }
+  h1 { font-size: clamp(26px, 4vw, 36px); line-height: 1.15; margin-bottom: 10px; }
+  h1 em { font-style: normal; color: var(--cyan); }
+  h2 { font-size: 20px; margin: 4px 0 12px; }
+  h3 { font-size: 16px; margin: 14px 0 6px; color: var(--text); }
+  p { margin-bottom: 10px; color: var(--muted); }
+  .qmark { background: #0c2230; border-left: 4px solid var(--cyan); padding: 12px 14px; margin: 0 0 14px; }
+  .qmark.ch { border-left-color: var(--orange); background: #24180f; }
+  .qcode { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); margin-bottom: 4px; }
+  .ch .qcode { color: var(--orange); }
+  .qtext { color: var(--text); font-style: italic; margin: 0; }
+  .grid2, .grid3, .grid4 { display: grid; gap: 12px; margin: 12px 0 8px; }
+  .grid2 { grid-template-columns: 1fr 1fr; }
+  .grid3 { grid-template-columns: repeat(3, 1fr); }
+  .grid4 { grid-template-columns: repeat(4, 1fr); }
+  .tile { background: #0c1322; border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .tile strong { color: var(--cyan); font-size: 12px; letter-spacing: .1em; }
+  .tile p, .tile li { font-size: 14px; }
+  ul.clean { margin: 0 0 8px 18px; color: var(--muted); }
+  ul.clean li { margin-bottom: 8px; }
+  .tabs { display: flex; gap: 8px; margin: 8px 0 14px; flex-wrap: wrap; }
+  .tabs button { background: transparent; color: var(--muted); border: 1px solid var(--line); padding: 7px 12px; border-radius: 8px; cursor: pointer; font: inherit; }
+  .tabs button.on { color: #071018; background: var(--cyan); border-color: var(--cyan); font-weight: 700; }
+  .panel { display: none; } .panel.on { display: block; }
+  .art { display: grid; grid-template-columns: 48px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .art:last-child { border-bottom: 0; }
+  .hex { width: 44px; height: 44px; display: grid; place-items: center; background: #0c2230; color: var(--cyan); border: 1px solid var(--cyan); border-radius: 8px; font-weight: 700; }
+  footer { margin-top: 8px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; text-align: center; color: var(--muted); font-size: 14px; }
+  footer b { color: var(--text); }
+  @media (max-width: 840px) { .grid4, .grid3, .grid2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div class="brand">STUDIO <span>BAURAN</span></div>
+    <nav class="pills">
+      <a href="#a1">Connection</a>
+      <a href="#a2">Challenge</a>
+      <a href="#a3">Concept</a>
+      <a href="#a4">Change</a>
+      <a href="#b1">Artefak</a>
+      <a href="#b2">Alasan</a>
+      <a href="#b3">Cuplikan</a>
+      <a href="#c">Simpulan</a>
+    </nav>
+    <div class="status"><i></i>sinkronus · asinkronus</div>
+  </div>
+
+  <div class="window">
+    <div class="chrome"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span> ruang-belajar · bukan gudang-file</div>
+    <div class="pad">
+      <h1>Pengajaran &amp; Pembelajaran <em>Daring dan Bauran</em></h1>
+      <p>Refleksi calon guru matematika yang melek teknologi, tetapi tetap berpusat pada siswa. Digitalisasi bukan memindahkan kertas ke layar — melainkan merancang ulang interaksi, asesmen, dan dukungan belajar.</p>
+    </div>
+  </div>
+
+  <section class="window" id="a1">
+    <div class="chrome">connection</div>
+    <div class="pad">
+      <div class="qmark">
+        <span class="qcode">Connection</span>
+        <p class="qtext">Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru?</p>
+      </div>
+      <p>Materi terkait langsung dengan peran calon guru matematika di SMK. Peran itu tidak lagi cukup dipahami sebagai penyampai rumus di papan tulis. Guru masa kini merancang pengalaman belajar, menyeimbangkan tuntutan teknologi dengan keterbatasan nyata di sekolah, serta tetap menjadi pembimbing karakter yang tidak dapat digantikan mesin. Teknologi (LMS, konferensi video, bahkan AI) memperkuat penguasaan teori dan literasi digital, tetapi tidak otomatis membentuk keterampilan mengelola kelas nyata. Calon guru wajib menguasai keduanya.</p>
+      <p>Keterkaitan itu terasa ketika materi ditautkan dengan pengalaman mengajar di Kota Surakarta dan PPL di SMK Negeri 1 Salatiga. Di kedua tempat, proyektor tidak tersedia tetap di setiap kelas, jaringan tidak selalu stabil, dan kemampuan awal siswa sangat heterogen. Materi kesenjangan teknologi, skema sinkronus-asinkronus, taksonomi Staker dan Horn, serta desain instruksional memberi bahasa profesional — bukan sekadar mengeluh soal fasilitas. Mengikuti perkembangan teknologi bukan berarti mengejar setiap aplikasi terbaru, melainkan mampu memilih dan menyesuaikan agar tetap inklusif bagi siswa yang perangkatnya terbatas.</p>
+      <p>Peran yang paling kuat adalah desainer instruksional. Setiap keputusan — model bauran, media, asesmen, format pengumpulan tugas — harus berangkat dari analisis peserta didik, tujuan pembelajaran, dan karakteristik mapel. Untuk matematika, alur nalar lebih penting daripada jawaban akhir. AI ditempatkan sebagai mitra merancang bahan dan soal, bukan pengganti guru. LMS dipahami sebagai ruang belajar, bukan gudang file.</p>
+    </div>
+  </section>
+
+  <section class="window" id="a2">
+    <div class="chrome">challenge</div>
+    <div class="pad">
+      <div class="qmark ch">
+        <span class="qcode">Challenge</span>
+        <p class="qtext">Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini?</p>
+      </div>
+      <p>Praktik selama PJJ dan setelahnya cenderung memindahkan kegiatan luring ke ruang digital tanpa mengubah logikanya: materi di Classroom, ceramah di Zoom, soal di Formulir, foto pekerjaan. Tampak “sudah digital”, tetapi pedagogis masih satu arah. Digitalisasi menuntut merancang ulang interaksi, asesmen, dan dukungan belajar.</p>
+      <ul class="clean">
+        <li><strong style="color:#e6eef8">Dari “asal memakai platform” ke desain instruksional.</strong> Mulai dari Analyze Learners (ASSURE) atau Analysis (ADDIE), baru tujuan, strategi, media, partisipasi, dan evaluasi.</li>
+        <li><strong style="color:#e6eef8">Dari LMS sebagai gudang berkas ke ruang belajar.</strong> Kuis diagnostik, umpan balik otomatis, forum refleksi, pelacakan aktivitas, gamifikasi adalah bagian desain — bukan hiasan.</li>
+        <li><strong style="color:#e6eef8">Dari satu metode ke personalisasi jalur.</strong> Ceramah klasikal tidak menjawab kesenjangan kelas X SMK. Individual Rotation, diferensiasi, dan ZPD menuntut lebih dari satu jalur.</li>
+        <li><strong style="color:#e6eef8">Dari asesmen hasil ke asesmen proses yang ramah perangkat.</strong> Pilihan ganda otomatis mengorbankan nalar. Jalur ganda: skor otomatis tetap ada, bukti proses berpikir tetap dikumpulkan.</li>
+        <li><strong style="color:#e6eef8">Dari bekerja sendirian ke peer review.</strong> Rancangan Flipped statistika baru utuh setelah ditelaah teman. Perangkat ajar tidak “selesai” begitu diketik.</li>
+      </ul>
+      <p>Tantangan ini memberatkan karena bauran menuntut ketelitian waktu, media cadangan, dan keberanian melepaskan kendali ceramah. Praktik lama tidak salah seluruhnya, tetapi tidak lagi memadai untuk siswa SMK yang heterogen dan fasilitas yang tidak merata.</p>
+    </div>
+  </section>
+
+  <section class="window" id="a3">
+    <div class="chrome">concept</div>
+    <div class="pad">
+      <div class="qmark">
+        <span class="qcode">Concept</span>
+        <p class="qtext">Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru?</p>
+      </div>
+      <div class="grid2">
+        <article class="tile"><strong>01</strong><h3>Kesenjangan berlapis</h3><p>Infrastruktur, SDM/literasi, ketidaksesuaian perangkat lunak dengan mapel, etika dan keamanan siber. Akses internet belum sama dengan melek teknologi. Solusi guru: jalur luring, pendampingan literasi, asesmen yang tidak menghukum spesifikasi gawai.</p></article>
+        <article class="tile"><strong>02</strong><h3>Logika daring, luring, bauran</h3><p>Blended menurut Means &amp; Philips adalah kombinasi yang dirancang untuk menaikkan capaian, bukan campuran asal. Sinkronus unggul pada kehadiran sosial; asinkronus pada fleksibilitas dan refleksi (Bonk &amp; Graham).</p></article>
+        <article class="tile"><strong>03</strong><h3>Triple E</h3><p>Teknologi hanya layak jika melibatkan (Engagement), memperdalam (Enhancement), dan memperluas ke luar kelas (Extension). Gagal satu saja, media itu hiasan.</p></article>
+        <article class="tile"><strong>04</strong><h3>Desain sebagai disiplin</h3><p>ADDIE (makro), ASSURE (harian, kuat pada media), Dick &amp; Carey (sistem), UbD (mundur dari bukti). Untuk LMS harian, ASSURE paling operasional. Desain membantu siswa belajar, bukan hanya membantu guru mengajar (Gagné dkk.).</p></article>
+      </div>
+      <h3>Taksonomi Staker &amp; Horn (2012)</h3>
+      <div class="tabs" id="tabs">
+        <button class="on" data-t="flip">Flipped</button>
+        <button data-t="rot">Rotation</button>
+        <button data-t="flex">Flex &amp; virtual</button>
+        <button data-t="car">Syarat Carman</button>
+        <button data-t="mod">Pilih model</button>
+      </div>
+      <div class="tile">
+        <div class="panel on" id="flip"><p>Penguasaan konsep dasar digeser ke rumah (video/PDF + tiket keluar). Waktu kelas untuk nalar tingkat tinggi dan soal sulit — bukan ceramah ulang.</p></div>
+        <div class="panel" id="rot"><p>Station dan Lab merotasi seluruh kelas. Individual Rotation menyesuaikan urutan stasiun dengan ZPD, bukan rotasi seragam. Rancangan bilangan berpangkat X SMK: tiga stasiun, tiga jenjang LKPD, diagnostik 10 soal menempatkan siswa ke Level 1/2/3.</p></div>
+        <div class="panel" id="flex"><p>Flex, Self-Blended, Enriched Virtual dipilih berdasarkan konteks, bukan popularitas.</p></div>
+        <div class="panel" id="car"><p>Lima syarat agar bauran tidak jatuh menjadi daring asal-asalan plus tatap muka biasa: live event, self-paced, kolaborasi, asesmen, bahan pendukung kinerja.</p></div>
+        <div class="panel" id="mod"><p>PBL kuat untuk statistika kontekstual, rentan jika arahan lemah. Digital storytelling merangsang literasi, mudah geser dari konsep. PjBL menghasilkan artefak, boros waktu. IBL menumbuhkan rasa ingin tahu, sulit bagi yang belum terbiasa berhipotesis. Gamifikasi menaikkan partisipasi, berbahaya jika siswa hanya kejar poin.</p></div>
+      </div>
+      <h3>Asesmen daring</h3>
+      <p>Prinsip of / for / as learning tetap berlaku. Kearns menekankan microlearning dan automatic feedback. Untuk matematika: platform otomatis boleh untuk hasil; proses berpikir wajib terlihat.</p>
+    </div>
+  </section>
+
+  <section class="window" id="a4">
+    <div class="chrome">change</div>
+    <div class="pad">
+      <div class="qmark ch">
+        <span class="qcode">Change</span>
+        <p class="qtext">Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini?</p>
+      </div>
+      <p>Perubahan konkret, terikat pada kelas matematika SMK — bukan niat umum “lebih kreatif memakai teknologi”.</p>
+      <ul class="clean">
+        <li>Memulai rancangan dari analisis siswa dan sarana. Jika proyektor antre atau jaringan lemah, rancangan tetap jalan lewat HTML/softfile luring di gawai siswa.</li>
+        <li>Menggeser ceramah penuh ke bauran terhubung: pra-kelas (konsep dasar), tatap muka (miskonsepsi, pemecahan masalah, tutor sebaya), pasca-kelas (refleksi). Tiga fase saling menyambung.</li>
+        <li>Diferensiasi yang terasa: diagnostik ke jalur ZPD dasar–sedang–mahir, LKPD bertingkat, rotasi stasiun. Siswa cepat tidak menunggu; siswa lambat tidak tertinggal dalam ceramah.</li>
+        <li>Asesmen adil secara digital: PDF pindai hitam-putih, skor otomatis hanya untuk yang objektif, umpan balik lebih cepat.</li>
+        <li>AI sebagai mitra etis untuk soal, konteks, scaffolding. Keputusan pedagogis, empati, dan integritas tetap di tangan guru. Siswa diajari membedakan bantuan dan menyalin.</li>
+        <li>Revisi berdasarkan data kuis, log LMS, dan peer review — seperti revisi rancangan statistika setelah ditelaah teman.</li>
+      </ul>
+      <p>Berhenti memandang keterbatasan fasilitas sebagai alasan kembali ke ceramah, sekaligus berhenti memandang teknologi sebagai ukuran mutu yang berdiri sendiri. Guru yang dituju adaptif: bermutu ketika fasilitas mendukung, tetap bermakna ketika fasilitas terbatas.</p>
+    </div>
+  </section>
+
+  <section class="window" id="b1">
+    <div class="chrome">bukti karya</div>
+    <div class="pad">
+      <div class="qmark" id="b1m">
+        <span class="qcode">Bukti karya</span>
+        <p class="qtext">Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini?</p>
+      </div>
+      <p>Tiga artefak mewakili rentang lengkap: menyadari masalah, merancang solusi atas kasus nyata, lalu mewujudkan konsep bauran ke rancangan kelas yang siap dijalankan. Jurnal = kesadaran dan sikap. UTS = penerapan konsep. Rancangan kelas = perubahan praktik.</p>
+      <div class="art"><div class="hex">01</div><div><h3>Jurnal refleksi — mencari masalah teknologi &amp; AI</h3><p>Menopang Connection dan Challenge: kesenjangan sarana di Surakarta dan Salatiga, sikap calon guru yang adaptif.</p></div></div>
+      <div class="art"><div class="hex">02</div><div><h3>UTS kesenjangan teknologi · Flipped matematika daring</h3><p>Menopang Concept: sinkronus-asinkronus, kesesuaian platform dengan mapel eksak, asesmen proses ramah perangkat.</p></div></div>
+      <div class="art"><div class="hex">03</div><div><h3>Individual Rotation · bilangan berpangkat X SMK</h3><p>Menopang Concept dan Change: taksonomi blended, diferensiasi ZPD, LKPD bertingkat, refleksi 4F.</p></div></div>
+
+      <div class="qmark ch" id="b2" style="margin-top:22px">
+        <span class="qcode">Alasan pemilihan</span>
+        <p class="qtext">Mengapa artefak tersebut yang saya pilih?</p>
+      </div>
+      <p><strong style="color:#e6eef8">Artefak 1</strong> paling jujur menampilkan pergeseran sikap. Jurnal menautkan wacana kesenjangan dengan proyektor bergiliran, jaringan tidak merata, dan kekhawatiran AI menggantikan guru. Tanpa itu, Connection dan Challenge hanya klaim. Jurnal menunjukkan penolakan ketergantungan pada fasilitas yang belum merata, lalu menawarkan HTML luring.</p>
+      <p><strong style="color:#e6eef8">Artefak 2</strong> paling jelas menganalisis masalah berlapis lalu mengubahnya menjadi desain. UTS tidak berhenti pada keluhan PJJ (mata lelah, foto terbalik, Formulir kaku, siswa menyalin). Akar: perangkat, software tidak ramah rumus, SDM, kebijakan yang menomorsatukan kepraktisan nilai. Solusi operasional: Flipped, pemisahan sinkronus-asinkronus, asesmen dua jalur.</p>
+      <p><strong style="color:#e6eef8">Artefak 3</strong> berbicara “begini saya akan mengajar besok”: konteks X SMK, justifikasi Horn–Staker dan Vygotsky, tiga stasiun, tiga jenjang LKPD, diagnostik menentukan jalur, refleksi 4F. Bukti terkuat Change: tidak lagi satu kegiatan untuk semua. Ketiga artefak saling mengunci. Jurnal tanpa rancangan normatif; rancangan tanpa jurnal teknis tanpa konteks; UTS menjadi jembatan.</p>
+
+      <div class="qmark" id="b3" style="margin-top:22px">
+        <span class="qcode">Cuplikan yang menopang</span>
+        <p class="qtext">Bagian mana dari artefak ini yang mendukung hasil refleksi saya?</p>
+      </div>
+      <p><strong style="color:#e6eef8">Artefak 1.</strong> Uraian fasilitas Surakarta dan PPL Salatiga, jawaban “solusi paling relevan”, komitmen materi luring. AI sebagai teman merancang, bukan ancaman. HTML tanpa internet menopang Challenge dan Change: meninggalkan kebiasaan “kalau tidak ada proyektor, kembali ke ceramah”.</p>
+      <p><strong style="color:#e6eef8">Artefak 2.</strong> Tabel pokok-akar dan matriks model menjawab kesenjangan. Hardware: ponsel sebagai kamera dokumen agar coretan rumus terlihat. Software: Formulir sebagai lembar jawab, PDF di Classroom sebagai bank soal dan bukti proses. Memori gawai: wajib pindai PDF hitam-putih. Integritas: tulisan tangan yang sulit disalin massal. Pra-kelas (video/PDF + tiket keluar), saat kelas (Zoom untuk soal sulit), pasca-kelas (Formulir + unggah proses).</p>
+      <p><strong style="color:#e6eef8">Artefak 3.</strong> Tabel permasalahan nyata kelas X, pemetaan ke solusi model, diferensiasi konten-proses-produk-lingkungan berdasarkan ZPD, alur 90 menit dengan diagnostik 10 soal ke Level 1/2/3, LKPD 1A dasar · 1B sedang · 1C HOTS. Refleksi 4F: diagnostik adalah fondasi, website adalah infrastruktur, data pertemuan 1 menyesuaikan pertemuan 2.</p>
+      <p>Benang merah: keberhasilan tidak diukur dari seberapa canggih platform, melainkan seberapa tepat desain menolong setiap siswa — termasuk yang gawainya terbatas, kemampuannya tertinggal, atau motivasinya rendah terhadap matematika.</p>
+    </div>
+  </section>
+
+  <section class="window" id="c">
+    <div class="chrome">simpulan</div>
+    <div class="pad">
+      <div class="qmark">
+        <span class="qcode">Simpulan</span>
+        <p class="qtext">Apa yang saya bawa dari perjalanan ini?</p>
+      </div>
+      <p>Mata kuliah ini menempatkan saya sebagai desainer instruksional yang melek teknologi dan berpusat pada siswa. Bauran yang bermakna lahir dari analisis peserta didik dan sarana, pilihan model yang sesuai konteks, asesmen yang menjaga nalar, dan keberanian merevisi berdasarkan bukti. Tiga artefak menunjukkan pergeseran dari kesadaran masalah, ke pemecahan kasus, lalu ke rancangan kelas yang siap dijalankan. Guru yang dituju adaptif: mampu merancang pembelajaran bermutu ketika fasilitas mendukung, dan tetap menjaga kebermaknaan belajar ketika fasilitas terbatas.</p>
+    </div>
+  </section>
+
+  <footer>
+    <b>Awang Haris Prasetyo Adhi</b> · NIM 95202581O · PPG Prajabatan 2026<br>
+    FKIP Universitas Kristen Satya Wacana · Matematika · SMK Negeri 1 Salatiga · 25 Agustus 2026
+  </footer>
+</div>
+<script>
+  document.querySelectorAll("#tabs button").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      document.querySelectorAll("#tabs button").forEach(function(b){ b.classList.remove("on"); });
+      document.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("on"); });
+      btn.classList.add("on");
+      document.getElementById(btn.getAttribute("data-t")).classList.add("on");
+    });
+  });
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3842be7ca42e416',t:'MTc4ODkzNTcxMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
