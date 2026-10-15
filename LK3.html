@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-Portofolio · Awang Haris Prasetyo Adhi</title>
+<style>
+  :root {
+    --ink: #1c1b19;
+    --muted: #5f5a53;
+    --paper: #f7f4ee;
+    --card: #fffcf7;
+    --line: #e4ddd2;
+    --pine: #1e3d34;
+    --leaf: #2f6f5e;
+    --clay: #c45c26;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Segoe UI", "Avenir Next", "Gill Sans", sans-serif;
+    background: #e8e2d6;
+    color: var(--ink);
+    line-height: 1.75;
+  }
+  .shell {
+    max-width: 1040px;
+    margin: 0 auto;
+    background: var(--paper);
+    box-shadow: 0 24px 50px rgba(30, 61, 52, .12);
+  }
+  .hero {
+    background: var(--pine);
+    color: #f4efe6;
+    padding: 48px 40px 36px;
+  }
+  .kicker {
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #c9e4d8;
+  }
+  h1 {
+    font-family: Georgia, "Iowan Old Style", serif;
+    font-size: clamp(30px, 5vw, 46px);
+    line-height: 1.1;
+    margin: 12px 0 14px;
+    max-width: 16ch;
+  }
+  .lede { max-width: 38em; color: #d7e6df; font-size: 17px; }
+  .id {
+    display: flex; flex-wrap: wrap; gap: 8px 18px;
+    margin-top: 22px; font-size: 13px; color: #c5d8cf;
+  }
+  .id span { border-left: 2px solid #4a8f78; padding-left: 10px; }
+  nav.bar {
+    display: flex; flex-wrap: wrap;
+    background: #16312a;
+  }
+  nav.bar a {
+    color: #dce8e3;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 12px 18px;
+    border-right: 1px solid #2a4a41;
+  }
+  nav.bar a:hover { background: #1e3d34; color: #fff; }
+  .wrap { padding: 36px 40px 56px; }
+  h2 {
+    font-family: Georgia, "Iowan Old Style", serif;
+    font-size: 26px;
+    color: var(--pine);
+    margin: 0 0 10px;
+  }
+  p { margin-bottom: 12px; text-align: justify; }
+  .qmark {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--leaf);
+    padding: 12px 16px;
+    margin: 0 0 16px;
+  }
+  .qcode {
+    display: block;
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--leaf);
+    font-weight: 700;
+  }
+  .qtext { font-style: italic; color: var(--muted); margin: 4px 0 0; }
+  article.block { margin-bottom: 40px; }
+  .steps { display: grid; gap: 12px; margin: 16px 0 8px; }
+  .step {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 14px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 16px;
+  }
+  .num {
+    width: 56px; height: 56px;
+    display: grid; place-items: center;
+    background: var(--pine);
+    color: #e8f4ee;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .step h3 { font-size: 16px; color: var(--pine); margin-bottom: 4px; }
+  .step p { margin: 0; text-align: left; color: var(--muted); font-size: 15px; }
+  footer.col {
+    background: var(--pine);
+    color: #c5d8cf;
+    text-align: center;
+    padding: 26px 16px 32px;
+    font-size: 14px;
+  }
+  footer.col b { display: block; color: #fff; font-size: 17px; margin-bottom: 4px; }
+  @media (max-width: 800px) {
+    .hero, .wrap { padding-left: 20px; padding-right: 20px; }
+    .step { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="hero">
+    <p class="kicker">E-portofolio · calon guru matematika</p>
+    <h1>Refleksi pengalaman belajar selama PPG</h1>
+    <p class="lede">Komitmen setelah meninjau seluruh jejak belajar. Pendidikan yang percaya pada siswa, guru yang terus bertumbuh, dan tiga langkah yang akan dikerjakan saat karier dimulai.</p>
+    <div class="id">
+      <span>Awang Haris Prasetyo Adhi</span>
+      <span>NIM 95202581O</span>
+      <span>PPG Prajabatan 2026</span>
+      <span>Matematika · SMK Negeri 1 Salatiga</span>
+    </div>
+  </header>
+  <nav class="bar">
+    <a href="#pendidikan">Pendidikan Indonesia</a>
+    <a href="#profesional">Guru profesional</a>
+    <a href="#rtl">Tiga langkah</a>
+  </nav>
+
+  <div class="wrap">
+    <article class="block" id="pendidikan">
+      <div class="qmark">
+        <span class="qcode">Pendidikan Indonesia</span>
+        <p class="qtext">Setelah mengikuti rangkaian refleksi pengalaman belajar, menurut anda, bagaimana seharusnya pendidikan di Indonesia?</p>
+      </div>
+      <h2>Percaya pada siswa, aman untuk belajar</h2>
+      <p>Setelah mengikuti rangkaian refleksi, saya menyadari pendidikan di Indonesia seharusnya percaya bahwa setiap siswa mampu belajar. Sekolah tidak boleh mencetak semua anak dengan cara yang sama. Guru perlu memfasilitasi banyak gaya belajar, misalnya visual, auditori, kinestetik, dan belajar bersama teman.</p>
+      <p>Setiap siswa juga perlu diberi kesempatan maju sesuai kecepatannya sendiri. Yang lambat bukan berarti tidak mampu. Yang cepat tidak boleh dibiarkan sendiri tanpa tantangan.</p>
+      <p>Yang paling penting, kelas harus terasa aman. Siswa boleh berbuat salah, lalu memperbaiki, tanpa takut dihukum atau diejek. Kesalahan adalah bahan belajar, bukan vonis. Jika siswa merasa aman, mereka berani mencoba, bertanya, dan bertumbuh.</p>
+      <p>Itulah pendidikan yang saya dukung. Pendidikan yang menuntun, berpihak pada potensi anak, dan mengukur keberhasilan dari keberanian belajar, bukan hanya dari nilai atau ketuntasan soal.</p>
+    </article>
+
+    <article class="block" id="profesional">
+      <div class="qmark">
+        <span class="qcode">Guru profesional</span>
+        <p class="qtext">Apa saja yang dapat anda lakukan untuk menjadi guru profesional?</p>
+      </div>
+      <h2>Mengajar, menguasai materi, memahami murid</h2>
+      <p>Untuk menjadi guru profesional, saya harus menguasai tiga hal yang saling terkait. Pertama, pedagogik, yaitu cara merancang dan memimpin pembelajaran agar murid benar-benar paham. Kedua, materi ajar, yaitu penguasaan isi pelajaran yang akan diajarkan. Ketiga, pemahaman terhadap peserta didik, termasuk cara berpikir, latar belakang, dan kondisi sosial-emosionalnya.</p>
+      <p>Pembelajaran sosial-emosional (PSE) membantu saya menjaga rasa aman, empati, dan hubungan yang sehat di kelas. Ketiganya tidak bisa dipisah. Materi yang dikuasai guru tidak akan sampai jika cara mengajar tidak menuntun, atau jika murid merasa tidak aman.</p>
+      <p>Selain itu, saya harus terus berkembang dalam memanfaatkan teknologi dan cepat menyesuaikan diri dengan perubahan kelas, kurikulum, maupun zaman. Teknologi dipilih karena membantu tujuan belajar, bukan karena sedang tren. Guru tetap menjadi pengarah.</p>
+      <p>Menjadi profesional berarti tidak berhenti belajar. Saya merancang, mengajar, membaca umpan balik, lalu memperbaiki.</p>
+    </article>
+
+    <article class="block" id="rtl">
+      <div class="qmark">
+        <span class="qcode">Rencana tindak lanjut</span>
+        <p class="qtext">Apa saja tiga hal penting yang akan anda lakukan ketika memulai karir sebagai guru?</p>
+      </div>
+      <h2>Pahami, rancang, perbaiki</h2>
+      <p>Tiga hal penting yang akan saya lakukan ketika memulai karir sebagai guru adalah sebagai berikut.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <h3>Memahami siswa, sekolah, dan tugas</h3>
+            <p>Melalui asesmen diagnostik, observasi, dan percakapan. Saya ingin tahu kesiapan belajar, gaya belajar, akses perangkat, dan suasana kelas sebelum mulai mengajar.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <h3>Merancang berdasarkan hasil itu</h3>
+            <p>Bukan berdasarkan kebiasaan lama. Tujuan, cara mengajar, materi, dan media disesuaikan dengan murid yang ada di depan saya.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <h3>Selalu merefleksi dan mengembangkan</h3>
+            <p>Setiap pertemuan saya catat apa yang sudah membantu murid, apa yang masih memaksa, dan satu perbaikan yang akan saya lakukan pada pertemuan berikutnya.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <footer class="col">
+    <b>Awang Haris Prasetyo Adhi</b>
+    NIM 95202581O · PPG Prajabatan 2026 · FKIP Universitas Kristen Satya Wacana<br>
+    Matematika · SMK Negeri 1 Salatiga
+  </footer>
+</div>
+</body>
+</html>
